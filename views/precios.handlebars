@@ -7,9 +7,44 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Parrafo</p>
-    <div class="rojo">
+    <section class="precios">
+        <div class="precios__text">
+
+        </div>
+
+        <div class="precios__iconos">
+            <div class="precios__iconos__comparar">
+
+            </div>
+             <div class="precios__iconos__shop">
+                
+            </div>
+        </div>
+
+    </section>
+
+    <section class="paquetes">
+
+
+    </section>
+
+    <section class="personalizado">
+        <div class="personalizado__textos">
+
+        </div>
+
+        <div class="personalizado__iconos">
         
+        <h1>{{titulo}}</h1>
+        {{#each productos}}
+        <article>
+            <h2>{{name}}</h2>
+        </article>
+        {{/each}}
+
+        </div>
+    </section>
+
     </div>
 </body>
 </html>

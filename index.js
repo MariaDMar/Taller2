@@ -1,11 +1,11 @@
 //importar el módulo express
-var express = require('express');
+const express = require('express');
 
 //crear la variable app usando express
-var app = express();
+const app = express();
 
 
-var motorRender = require('express-handlebars');
+const motorRender = require('express-handlebars');
 //configurar la carpeta public como publica
 app.use(express.static('public'));
 
@@ -18,8 +18,19 @@ app.get('/', function(req, res){
 res.render('home');
 });
 
-app.get('/precios', function(req, res){
-    res.render('precios');
+//arreglo para productos
+
+var paquetes = require('./productos')
+
+app.get('/precios', function(req, res){ 
+    
+    var contexto = {
+        titulo: 'titulo',
+        productos: paquetes
+    }
+    
+    res.render('precios', contexto);
+    
     console.log('leyo precios');
     });
     
