@@ -21,6 +21,27 @@ module.exports = [
         
     },
 
+    {
+        name: "Transacciones",
+        img: "./imagenes/precios/transacciones.png",
+        cantidad: 0,
+        
+    },
+
+    {
+        name: "Consultoria",
+        img: "./imagenes/precios/consultoria.png",
+        cantidad: 0,
+        
+    },
+
+    {
+        name: "POS",
+        img: "./imagenes/precios/pos.png",
+        cantidad: 0,
+        
+    },
+
     
    
 ]

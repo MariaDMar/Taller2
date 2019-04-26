@@ -14,7 +14,7 @@ app.engine('handlebars', motorRender());
 app.set('view engine', 'handlebars');
 
 //configurar la ruta inicial
-app.get('/', function(req, res){
+app.get('/home', function(req, res){
 res.render('home');
 });
 
