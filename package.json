@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/MariaDMar/Taller2#readme",
   "dependencies": {
+    "assert": "^1.4.1",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
     "mongo": "^0.1.0"
