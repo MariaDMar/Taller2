@@ -14,27 +14,55 @@ app.engine('handlebars', motorRender());
 app.set('view engine', 'handlebars');
 
 //configurar la ruta inicial
-app.get('/home', function(req, res){
-res.render('home');
+app.get('/', function (req, res) {
+    res.render('home');
 });
 
 //arreglo para productos
 
 var paquetes = require('./productos')
 
-app.get('/precios', function(req, res){ 
-    
+app.get('/precios', function (req, res) {
+
     var contexto = {
         titulo: 'titulo',
         productos: paquetes
     }
-    
-    res.render('precios', contexto);
-    
-    console.log('leyo precios');
-    });
-    
 
-app.listen(3000, function(){
+    res.render('precios', contexto);
+
+    console.log('leyo precios');
+});
+
+app.get('/personalizar', function (req, res) {
+
+    var contexto = {
+    }
+
+    res.render('personalizar', contexto);
+});
+
+app.get('/cotizar', function (req, res) {
+
+    var contexto = {
+        
+    }
+
+    res.render('precio', contexto);
+});
+
+
+//configurar la ruta inicial
+
+app.post('/cotizar', function (req, res) {
+
+    var precio = req.body.pr;
+
+    console.log(precio);
+
+    res.redirect('/precio');
+});
+
+app.listen(3000, function () {
     console.log('Hola');
 });

@@ -32,12 +32,12 @@ html{
 .scrollbar__content{
     
     margin-left: 30px;
-	float: left;
-	height: 300px;
-	width: 65px;
-	background: #F5F5F5;
-	overflow-y: scroll;
-	margin-bottom: 25px;
+    float: left;
+    height: 300px;
+    width: 65px;
+    background: #F5F5F5;
+    overflow-y: scroll;
+    margin-bottom: 25px;
     
     &__info{
         
@@ -166,10 +166,15 @@ html{
                 align-content: center;
                 align-items: center;
                 
-                li{margin-left: 15px;
+                li{
+                    margin-left: 15px;
                     text-decoration: none;
                     list-style: none; 
-                    a{color: $grayColor; text-decoration: none;}
+                    
+                    a{
+                        color: $grayColor; 
+                        text-decoration: none;
+                    }
                     
                     button{
                         background: none;
@@ -617,7 +622,7 @@ html{
                             }
                         }
                         
-
+                        
                         &__info{
                             display: flex;
                             flex-direction: row;
