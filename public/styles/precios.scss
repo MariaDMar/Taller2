@@ -325,3 +325,39 @@ body{
     }
     
 }
+
+
+.titulosp{
+    position: relative;
+    height: 53px;
+    color: #0af;
+    align-content: center;
+    width: 50%;
+    margin-top: 100px;
+    
+    h1{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 54px;
+        text-align: center;
+        color: #2E3192;
+    }
+    
+    h2{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        text-align: center;
+        color: #09374C;
+        margin-top: 15px;
+        
+        
+    }
+}
+
+.personalizado{
+    margin-top: 500px;
+}
