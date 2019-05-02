@@ -34,6 +34,12 @@ app.get('/precios', function (req, res) {
     console.log('leyo precios');
 });
 
+//configurar pagina de pagos
+
+app.get('/pagos', function (req, res) {
+    res.render('pagos');
+});
+
 app.get('/personalizar', function (req, res) {
 
     var contexto = {
