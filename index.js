@@ -13,6 +13,28 @@ app.use(express.static('public'));
 app.engine('handlebars', motorRender());
 app.set('view engine', 'handlebars');
 
+const MongoClient = require('mongodb').MongoClient;
+const assert = require('assert');
+
+// Connection URL
+const url = 'mongodb://localhost:27017';
+
+// Database Name
+const dbName = 'wxmanager';
+
+// Create a new MongoClient
+const client = new MongoClient(url, { useNewUrlParser: true });
+
+var db = null;
+
+// Use connect method to connect to the Server
+client.connect(function(err) {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
+
+   db = client.db(dbName);
+});
+
 //configurar la ruta inicial
 app.get('/', function (req, res) {
     res.render('home');
@@ -24,14 +46,23 @@ var paquetes = require('./productos')
 
 app.get('/precios', function (req, res) {
 
-    var contexto = {
-        titulo: 'titulo',
-        productos: paquetes
-    }
+    const collection = db.collection('productos');
 
-    res.render('precios', contexto);
+    //recorre base de datos
 
-    console.log('leyo precios');
+    collection.find({}).toArray(function(err, docs) {
+        assert.equal(err, null);
+
+        var contexto = {
+            titulo: 'titulo',
+            productos: docs
+        }
+    
+        res.render('precios', contexto);
+    
+        console.log('leyo precios');
+      });
+
 });
 
 //configurar pagina de pagos

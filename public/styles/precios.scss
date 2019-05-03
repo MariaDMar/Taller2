@@ -68,13 +68,11 @@ body{
     width: 50%;
     
     h1{
-        font-family: Open Sans;
-        font-style: normal;
+        font-family: 'Open Sans', sans-serif;
         font-weight: 600;
-        font-size: 40px;
-        line-height: 54px;
+        font-size: 30px;
         text-align: center;
-        color: #2E3192;
+        color:  rgb(15, 55, 139);
     }
     
     h2{
@@ -237,7 +235,7 @@ body{
             align-items: center;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
             align-self: center;
-
+            
             &__lista{
                 margin-left: 10px;
                 color: #00DD80;
@@ -257,7 +255,7 @@ body{
                 
                 color: #00DD80;
             }
-
+            
             button{
                 width: 183px;
                 height: 40px;
@@ -291,7 +289,7 @@ body{
             align-items: center;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
             align-self: center;
-
+            
             &__lista{
                 margin-left: 10px;
                 color: #37B5F4;
@@ -312,7 +310,7 @@ body{
             align-items: center;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
             align-self: center;
-
+            
             &__lista{
                 margin-left: 10px;
                 color: #37B5F4;
