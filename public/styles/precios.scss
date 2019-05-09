@@ -612,16 +612,77 @@ body{
         
         &__informacion{
             width: 40%;
-            background: red;
+            background:none;
             display: row;
             flex-direction: column;
             flex-wrap: wrap;
             
+            h1{
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 600;
+                font-size: 30px;
+                text-align: left;
+                color: rgb(15, 55, 139);
+                margin-bottom: 6%;
+            }
+
+            input[type=text] {
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid black;
+                width: 100%;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                text-align: left;
+            }
+
+            h3{
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 600;
+                font-size: 14px;
+                text-align: left;
+                color: black;
+                margin-bottom: 6%;
+            }
+
+            button{
+                background: none;
+                border-radius: 42px;
+                text-decoration: none;
+                padding: 8px 18px;
+                border: 1px solid rgb(175, 182, 187);
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                font-size: 14px;
+                color: rgb(175, 182, 187);
+            }
+            
+            button:hover{
+                background: #0af;
+                border-radius: 42px;
+                border: 1px;
+                text-decoration: none;
+                color: #fff;
+                padding: 8px 18px;
+            }
+            
+            button:active{
+                background: rgb(2, 83, 175);
+                border-radius: 42px;
+                border: 1px;
+                text-decoration: none;
+                padding: 8px 18px;
+                color: #fff;
+            }
+
         }
-        
-        
     }
     
+
+   
+        
+        
     .personalizado{
         margin-top: 500px;
     }

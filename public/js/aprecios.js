@@ -26,7 +26,7 @@ function quitarUsuario() {
 
 /* Interacción Transacciones */
 
-var agregarTrans = document.querySelector('#agregarTransao');
+var agregarTrans = document.querySelector('#agregarTransa');
 var quitarTrans = document.querySelector('#restarTransa');
 var transaccion = document.querySelector('#transa');
 
