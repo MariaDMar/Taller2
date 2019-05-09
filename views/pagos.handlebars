@@ -15,10 +15,12 @@
 
     <section class="cuerpo">
         <div class="cuerpo__izq">
+             {{#each productos}}
                     <div class="cuerpo__izq contenido">
-            <h1><b>Contable</b></h1>
-            <h1>$80.000/mes</h1>
-            <img src="/public/imagenes/pagos/person.png" class="cuerpo__izq contenido-imagen" alt="" width="50%">
+            <h1><b>{{nombre}}</b></h1>
+            <h1>${{precio}}/mes</h1>
+            <img src="imagenes/pagos/person.png" alt="" width="100%">
+        {{/each }}
         </div>
         </div>
 

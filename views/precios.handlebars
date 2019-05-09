@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Precios</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400, 600, 700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/styles/precios.css">
@@ -14,129 +14,183 @@
 
 <body>
 
+    <nav class="nav">
+
+        <header class="nav__header">
+
+            <div class="nav__header__container">
+                <div class="nav__header__container__logo">
+                    <figure><img src="imagenes/logo.png" alt="" width="100px"></figure>
+                </div>
+
+                <ul class="nav__header__container__links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/precios">Precios</a></li>
+                    <li><a href="#">Contáctenos</a></li>
+                    <li><a href="#">Tutoriales</a></li>
+                </ul>
+            </div>
+
+
+            <ul class="nav__header__contact">
+                <li><a href="#"> 315-519-7540</a></li>
+                <li><button>Cotizar</button></li>
+            </ul>
+
+
+            <div class="nav__header__toggle">
+                <i class="fa fa-bars menu" aria-hidden="true"></i>
+            </div>
+        </header>
+
+        <ul class="nav__column">
+            <li><a href="#">Home</a></li>
+            <li><a href="/precios">Precios</a></li>
+            <li><a href="#">Contáctenos</a></li>
+            <li><a href="#">Tutoriales</a></li>
+            <li><a href="#"> 315-519-7540</a></li>
+            <li class="button"><button class="">Cotizar</button></li>
+        </ul>
+
+    </nav>
+
     <section class="titulos">
         <h1>Selecciona tu paquete.</h1>
-        <h2>Escoge las funciones que tu equipo de trabajo está necesitando actualmente. Haz crecer con facilidad tu negocio</h2>
+        <h2>Escoge las funciones que tu equipo de trabajo está necesitando actualmente. Haz crecer con facilidad tu
+            negocio</h2>
     </section>
-
-
     <section class="paquetes">
 
-       <button>COMPARAR PRODUCTOS</button>
+        <a href="/precios?empleados=5">5</a>
+        <a href="/precios?empleados=10">10</a>
+        <a href="/precios?empleados=15">15</a>
+
+
+        <button>FILTRAR PRODUCTOS <img src="imagenes/precios/filtro.png" alt="" width="5%"></button>
         <div class="paquetes__item">
-            <div class="paquetes__item contable">
-                <h3>Contable</h3>
-                <h4>Empieza desde</h4>
-                <h1>$80.000/mes</h1>
-                 <ul>
-                    <li>Contabilidad</li>
-                    <li>Impuestos</li>
-                    <li>Facturación Electrónica</li>
-                    <li>Estados Financieros</li>
-                    <li>Parametrización</li>
-                    <li>Cartera, Cobros</li>
-                    <li>Proveedores</li>
-                    <li>Ventas de Servicios</li>
 
-                </ul>
-                <button>COMPRAR</button>
-                <ul>
-                    <li><b>5</b> empleados en nómina</li>
-                    <li><b>10 horas</b> de soporte</li> 
-                   
-                </ul>
-            </div>
+            {{#each productos}}
+            {{#if especial}}
             <div class="paquetes__item basico">
-                <h5>POPULAR</h5>
-                  <h3>Básico</h3>
+                <h3>{{nombre}}</h3>
                 <h4>Empieza desde</h4>
-                <h1>$120.000/mes</h1>
-                 <ul>
-                    <li class="paquetes__item basico__lista"><b>Paquete contable +</b></li>
-                    <li>Inventarios</li>
-                    <li>Gestión de Ventas</li>
-                    <li>Gestión de Compras</li>
-                    <li>50 transacciones electrónicas</li>
-                </ul>
-                <button>COMPRAR</button>
+                <h1>${{precio}}/mes</h1>
                 <ul>
-                    <li><b>10</b> empleados en nómina</li>
-                    <li><b>10 horas</b> de soporte</li> 
-                   
+                    <li class="paquetes__item basico__lista"><b>{{anexo}}</b></li>
+                    {{#each incluye}}
+                    <li>{{this}}<img src="imagenes/precios/check.png" alt="" width="5%"></li>
+                    {{/each}}
                 </ul>
-            </div>
+                <button><a href="/pagos">COMPRAR</a></button>
+                <ul>
+                    <li><b>{{empleados}}</b> empleados en nómina</li>
+                    <li><b>{{horas}}</b> horas de soporte</li>
 
-            <div class="paquetes__item pymes">
-                  <h3>Pymes</h3>
-                <h4>Empieza desde</h4>
-                <h1>$150.000/mes</h1>
-                 <ul>
-                    <li class="paquetes__item pymes__lista"><b>Paquete básico +</b></li>
-                    <li>Activos Fijos</li>
-                    <li>Gestión de Compras</li>
-                    <li>Liquidación Comisiones</li>
-                    <li>POS Autonómo</li>
-                    <li>Dispositivos Moviles</li>
-                    <li>100 transacciones electrónicas</li>
-                </ul>
-                <button>COMPRAR</button>
-                <ul>
-                    <li><b>10</b> empleados en nómina</li>
-                    <li><b>15 horas</b> de soporte</li> 
-                   
                 </ul>
             </div>
+            {{else}}
+            <div class="paquetes__item contable">
+                <h3>{{nombre}}</h3>
+                <h4>Empieza desde</h4>
+                <h1>${{precio}}/mes</h1>
+                <ul>
+                    <li class="paquetes__item contable__lista"><b>{{anexo}}</b></li>
+                    {{#each incluye}}
+                    <li>{{this}}<img src="imagenes/precios/check.png" alt="" width="5%"></li>
+                    {{/each}}
+                </ul>
+                <button><a href="/pagos?compras={{name}}">COMPRAR</a></button>
+                <ul>
+                    <li><b>{{empleados}}</b> empleados en nómina</li>
+                    <li><b>{{horas}}</b> horas de soporte</li>
 
-            <div class="paquetes__item premium">
-                  <h3>Premium</h3>
-                <h4>Empieza desde</h4>
-                <h1>$200.000/mes</h1>
-                 <ul>
-                    <li  class="paquetes__item premium__lista"><b>Paquete Pymes +</b></li>
-                    <li>Mercancía en Consignación</li>
-                    <li>Control de Inventarios</li>
-                    <li>Recetas, emsambles, etc</li>
-                    <li>500 transacciones electrónicas</li>
-                </ul>
-                <button>COMPRAR</button>
-                <ul>
-                    <li><b>15</b> empleados en nómina</li>
-                    <li><b>20 horas</b> de soporte</li> 
-                   
                 </ul>
             </div>
+            {{/if}}
+            {{/each }}
+
         </div>
 
+        <!-- <section id="section03" class="demo">
+        <a href="#titulosp"><span></span></a>
+    </section> -->
 
     </section>
 
     <section class="titulosp">
-         <h1>¡Arma tu paquete!</h1>
-        <h2>Sabemos que te gusta personalizar tus productos, por ende hemos decidido darte la opción de armar tu propia cotización</h2>
+        <h1>¡Arma tu paquete!</h1>
+        <h2>Sabemos que te gusta personalizar tus productos, por ende hemos decidido darte la opción de armar tu propia
+            cotización</h2>
     </section>
 
     <section class="armando">
 
-        
+        <div class="armando__productos">
 
-    </section>
+            <div class="armando__productos__info">
+                <!-- USUARIO -->
+                <button id="restarUsuario" class="armando__productos__info btnb">-</button>
 
-    <section class="personalizado">
-        <div class="personalizado__textos">
+                <div class="armando__productos__info texto">
+                    <h3 id="usuario">#</h3>
+                    <img src="imagenes/precios/users.png" alt="" width="60%">
+                    <h2>Usuarios</h2>
+                </div>
+
+                <button id="agregarUsuario" class="armando__productos__info btn">+</button>
+            </div>
+
+            <div class="armando__productos__info">
+                <!-- TRANSACCIONES -->
+                <button id="restarTransa" class="armando__productos__info btnb">-</button>
+
+                <div class="armando__productos__info texto">
+                    <h3 id="transa" >#</h3>
+                    <img src="imagenes/precios/transacciones.png" alt="" width="60%">
+                    <h2>Cantidad de Transacciones</h2>
+                </div>
+
+                <button id="agregarTransa" class="armando__productos__info btn">+</button>
+            </div>
+
+            <div class="armando__productos__info">
+                <!-- NÓMINA -->
+                <button id="restarNomina" class="armando__productos__info btnb">-</button>
+                <div class="armando__productos__info texto">
+                    <h3 id="nomina">#</h3>
+                    <img src="imagenes/precios/nomina.png" alt="" width="60%">
+                    <h2>Nómina</h2>
+                </div>
+
+                <button id="agregarNomina" class="armando__productos__info btn">+</button>
+            </div>
+
+            <div class="armando__productos__info">
+                <!-- ESTACIONES -->
+                <button id="restarEsta" class="armando__productos__info btnb">-</button>
+                <div class="armando__productos__info texto">
+                    <h3 id="esta">#</h3>
+                    <img src="imagenes/precios/estaciones.png" alt="" width="60%">
+                    <h2>Estaciones / Locales</h2>
+                </div>
+                <button id="agregarEsta" class="armando__productos__info btn">+</button>
+            </div>
+
+            <h1>Costo estimado: </h1>
+        </div>
+
+        <div class="armando__informacion">
+
 
         </div>
 
-        <div class="personalizado__iconos">
-
-            <h1>{{titulo}}</h1>
-            {{#each productos}}
-            <article>
-                <h2>{{name}}</h2>
-            </article>
-            {{/each}}
-
-        </div>
     </section>
+
+
+
+    <script src="/js/scrolldown.js" type="text/javascript"></script>
+
+    <script src="/js/aprecios.js"></script>
 
     </div>
 </body>

@@ -1,42 +1,42 @@
 module.exports = [
 
     {
-        name: "Usuarios",
+        nombre: "Usuarios",
         img: "./imagenes/precios/users.png",
         cantidad: 0,
         
     },
 
     {
-        name: "Nómina",
+        nombre: "Nómina",
         img: "./imagenes/precios/nomina.png",
         cantidad: 0,
         
     },
 
     {
-        name: "Estaciones",
+        nombre: "Estaciones",
         img: "./imagenes/precios/estaciones.png",
         cantidad: 0,
         
     },
 
     {
-        name: "Transacciones",
+        nombre: "Transacciones",
         img: "./imagenes/precios/transacciones.png",
         cantidad: 0,
         
     },
 
     {
-        name: "Consultoria",
+        nombre: "Consultoria",
         img: "./imagenes/precios/consultoria.png",
         cantidad: 0,
         
     },
 
-    {
-        name: "POS",
+    { 
+        nombre: "POS",
         img: "./imagenes/precios/pos.png",
         cantidad: 0,
         

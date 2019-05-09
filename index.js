@@ -43,14 +43,24 @@ app.get('/', function (req, res) {
 //arreglo para productos
 
 var paquetes = require('./productos')
-
+//MI PAGINA DE PRECIOSSSSS
 app.get('/precios', function (req, res) {
 
     const collection = db.collection('productos');
 
+
+    var query = {};
+
+    if(req.query.empleados){
+        query.empleados = parseInt(req.query.empleados);
+    }
+
+
+
+    const collectionPaquetes = db.collection('paquetes');
     //recorre base de datos
 
-    collection.find({}).toArray(function(err, docs) {
+    collectionPaquetes.find(query).toArray(function(err, docs) {
         assert.equal(err, null);
 
         var contexto = {
@@ -67,16 +77,21 @@ app.get('/precios', function (req, res) {
 
 //configurar pagina de pagos
 
-app.get('/pagos', function (req, res) {
-    res.render('pagos');
+app.get('/pagos:compras', function (req, res) { 
+    console.log(res.params.compras);
+    res.render(res.params.compras);
 });
+
+//PAGINA PERSONALIZAR
 
 app.get('/personalizar', function (req, res) {
 
     var contexto = {
     }
 
+    
     res.render('personalizar', contexto);
+  
 });
 
 app.get('/cotizar', function (req, res) {
