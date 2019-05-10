@@ -77,9 +77,12 @@ app.get('/precios', function (req, res) {
 
 //configurar pagina de pagos
 
-app.get('/pagos:compras', function (req, res) { 
-    console.log(res.params.compras);
-    res.render(res.params.compras);
+app.get('/pagos', function (req, res) { 
+    var contexto = {
+        nombre: req.query.nombre,
+        precio: req.query.precio,
+    }
+    res.render('pagos', contexto);
 });
 
 //PAGINA PERSONALIZAR

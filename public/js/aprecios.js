@@ -88,7 +88,7 @@ agregarEst.addEventListener('click', agregarEstacion);
 
 function agregarEstacion() {
     valorEst++;
-    estacion.innerHTML = valorNomina;
+    estacion.innerHTML = valorEst;
 }
 
 quitarEst.addEventListener('click', quitarEstacion);
@@ -104,7 +104,7 @@ function quitarEstacion() {
 
 /*PLUS*/
 
-var btnCotizar = document.querySelector('#btnCotizar');
+var btnCotizar = document.querySelector('#costo');
 
 btnCotizar.addEventListener('click', cotizar);
 
@@ -114,15 +114,13 @@ var data = {};
 
 function cotizar() {
 
-    var precioUsuario = valorUsuario * 1000;
-    var precioTransaccion = valorTrans * 500;
-    var precioNomina = valorNomina * 1000;
-    var precioEstacion = valorEst * 500;
+    var precioUsuario = valorUsuario * 20000;
+    var precioTransaccion = valorTrans * 300;
+    var precioNomina = valorNomina * 3000;
+    var precioEstacion = valorEst * 35000;
 
     precio = precioUsuario + precioTransaccion + precioNomina + precioEstacion;
-
     console.log(precio);
-
     data = {pr: precio};
 
 }

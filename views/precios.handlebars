@@ -61,9 +61,12 @@
     </section>
     <section class="paquetes">
 
-        <a href="/precios?empleados=5">5</a>
-        <a href="/precios?empleados=10">10</a>
-        <a href="/precios?empleados=15">15</a>
+       <!-- <a href="/precios?empleados=5">5</a> -->
+         <!-- <a href="/precios?empleados=10">10</a>  -->
+       <!--   <a href="/precios?empleados=15">15</a> -->
+        <input type="checkbox"> <a href="/precios?empleados=5">5</a><br>
+        <input type="checkbox"> <a href="/precios?empleados=10">10</a> <br>
+        <input type="checkbox"> <a href="/precios?empleados=15">15</a> <br>
 
 
         <button>FILTRAR PRODUCTOS <img src="imagenes/precios/filtro.png" alt="" width="5%"></button>
@@ -81,7 +84,7 @@
                     <li>{{this}}<img src="imagenes/precios/check.png" alt="" width="5%"></li>
                     {{/each}}
                 </ul>
-                <button><a href="/pagos">COMPRAR</a></button>
+                <button><a href="/pagos?nombre={{nombre}}&precio={{precio}}">COMPRAR</a></button>
                 <ul>
                     <li><b>{{empleados}}</b> empleados en nómina</li>
                     <li><b>{{horas}}</b> horas de soporte</li>
@@ -99,7 +102,7 @@
                     <li>{{this}}<img src="imagenes/precios/check.png" alt="" width="5%"></li>
                     {{/each}}
                 </ul>
-                <button><a href="/pagos?compras={{name}}">COMPRAR</a></button>
+                <button><a href="/pagos?nombre={{nombre}}&precio={{precio}}">COMPRAR</a></button>
                 <ul>
                     <li><b>{{empleados}}</b> empleados en nómina</li>
                     <li><b>{{horas}}</b> horas de soporte</li>
@@ -169,26 +172,25 @@
                 <!-- ESTACIONES -->
                 <button id="restarEsta" class="armando__productos__info btnb">-</button>
                 <div class="armando__productos__info texto">
-                    <h3 id="esta"></h3>
+                    <h3 id="estacion"></h3>
                     <img src="imagenes/precios/estaciones.png" alt="" width="60%">
                     <h2>Estaciones / Locales</h2>
                 </div>
                 <button id="agregarEsta" class="armando__productos__info btn">+</button>
             </div>
 
-            <h1>Costo estimado: </h1>
+            <h1 id="costo">Costo estimado: </h1>
         </div>
 
         <div class="armando__informacion">
             <h1>Datos para cotización</h1>
             <input type="text">
             <h3>CORREO</h3>
-             <input type="text">
+            <input type="text">
             <h3>TELEFONO</h3>
-             <input type="text">
+            <input type="text">
             <h3>DIRECCION</h3>
-            <button>Cotizar</button>
-
+            <button id="btnCotizame">Cotizar</button>
         </div>
 
     </section>
@@ -198,6 +200,10 @@
     <script src="/js/scrolldown.js" type="text/javascript"></script>
 
     <script src="/js/aprecios.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="/js/sweetalert.min.js"></script>
+
 
     </div>
 </body>
