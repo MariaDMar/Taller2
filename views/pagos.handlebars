@@ -11,7 +11,47 @@
     <link rel="stylesheet" type="text/css" href="/styles/pagos.css">
 </head>
 <body>
+<!--
+    <nav class="nav">
 
+        <header class="nav__header">
+
+            <div class="nav__header__container">
+                <div class="nav__header__container__logo">
+                    <figure><img src="imagenes/logo.png" alt="" width="100px"></figure>
+                </div>
+
+                <ul class="nav__header__container__links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/precios">Precios</a></li>
+                    <li><a href="#">Contáctenos</a></li>
+                    <li><a href="#">Tutoriales</a></li>
+                </ul>
+            </div>
+
+
+            <ul class="nav__header__contact">
+                <li><a href="#"> 315-519-7540</a></li>
+                <li><button>Cotizar</button></li>
+            </ul>
+
+
+            <div class="nav__header__toggle">
+                <i class="fa fa-bars menu" aria-hidden="true"></i>
+            </div>
+        </header>
+
+        <ul class="nav__column">
+            <li><a href="#">Home</a></li>
+            <li><a href="/precios">Precios</a></li>
+            <li><a href="#">Contáctenos</a></li>
+            <li><a href="#">Tutoriales</a></li>
+            <li><a href="#"> 315-519-7540</a></li>
+            <li class="button"><button class="">Cotizar</button></li>
+        </ul>
+
+    </nav>
+-->
 
     <section class="cuerpo">
         <div class="cuerpo__izq">
@@ -19,18 +59,35 @@
                     <div class="cuerpo__izq contenido">
             <h1><b>{{nombre}}</b></h1>
             <h1>${{precio}}/mes</h1>
-            <img src="imagenes/pagos/person.png" alt="" width="100%">
+            <img src="imagenes/pagos/person.png" alt="" width="150%">
        
         </div>
         </div>
 
         <div class="cuerpo__der">
              <div class="cuerpo__der contenido">
-        <input type="button" value="Go Back From Whence You Came!" onclick="history.back(-1)" />
+                 <button onclick="history.back(-1)" > < Volver a precios</button>
         <h1>Detalles de Pago</h1>
 
         <input type="text" id="fname" name="firstname" placeholder="Escribe tu nombre">
-        <h3>Nombre del Comprador</h3>
+        <h3>NOMBRE DEL COMPRADOR</h3>
+
+        <input type="text" id="fname" name="firstname" placeholder="Escribe tu número de documento">
+        <h3>NÚMERO DE CÉDULA</h3>
+
+        
+        <input type="text" id="fname" name="firstname" placeholder="Número de tarjeta">
+        <h3>NÚMERO DE TARJETA</h3>
+
+        
+        <input type="text" id="fname" name="firstname" placeholder="Fecha de expiración">
+        <h3>FECHA DE EXPIRACIÓN</h3>
+
+        
+        <input type="text" id="fname" name="firstname" placeholder="Dirección">
+        <h3>DIRECCIÓN</h3>
+
+
         </div>
 
          <div class="cuerpo__der pago">

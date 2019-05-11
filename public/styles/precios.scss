@@ -544,7 +544,7 @@ body{
             align-items: center;
             height: auto;
             width: 50%;
-           
+            
             
             h2{
                 text-align: center;
@@ -554,6 +554,19 @@ body{
                 color: #09374C;
                 margin-top: 15px;
                 font-size: 16px;
+            }
+            
+            
+            
+            h1{
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                margin-left: 8%;
+                font-weight: 600;
+                font-size: 30px;
+                text-align: center;
+                color:  rgb(15, 55, 139);
+                margin-top: 15px;
             }
             
             
@@ -579,9 +592,9 @@ body{
                     font-size: 24;
                     color:  #00DD80;
                     font-weight: 600;
-
+                    
                 }
-
+                
                 .btnb{
                     width: 30px;
                     height: auto;
@@ -599,7 +612,7 @@ body{
                     align-content: center;
                     align-items: center;
                     padding: 2%;
-
+                    
                     h3{
                         color: white;
                         text-align: center;
@@ -632,27 +645,27 @@ body{
                 color: rgb(15, 55, 139);
                 margin-bottom: 6%;
             }
-
+            
             input[type=text] {
                 background: transparent;
                 border: none;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid rgb(15, 55, 139);
                 width: 100%;
                 font-family: 'Open Sans', sans-serif;
                 font-weight: 300;
                 font-size: 16px;
                 text-align: left;
             }
-
+            
             h3{
                 font-family: 'Open Sans', sans-serif;
                 font-weight: 600;
                 font-size: 14px;
                 text-align: left;
-                color: black;
+                color: rgb(15, 55, 139);
                 margin-bottom: 6%;
             }
-
+            
             button{
                 background: none;
                 border-radius: 42px;
@@ -682,14 +695,14 @@ body{
                 padding: 8px 18px;
                 color: #fff;
             }
-
+            
         }
     }
     
-
-   
-        
-        
+    
+    
+    
+    
     .personalizado{
         margin-top: 500px;
     }
