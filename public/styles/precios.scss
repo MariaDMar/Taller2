@@ -686,12 +686,14 @@ body{
                 .texto{
                     align-content: center;
                     align-items: center;
+                    flex-direction: column;
                     padding: 2%;
                     
                     h3{
-                        color: white;
+                        color: black;
                         text-align: center;
-                        background: #6C63FF;
+                        align-content: center;
+                        background: none;
                         box-sizing: border-box;
                         border-radius: 100px;
                         width: 20%;
@@ -832,11 +834,14 @@ body{
         .armando{
             
             &__productos{
+                justify-content: center;
+                align-content: center;
+                align-items: center;
                 width: 100%;
                 margin-top: 25%;
+
                 &__info{
-                    width: 100%;
-                    
+                    width: 70%;
                     flex-direction: row;
                     img{
                         width: 40%;
