@@ -62,24 +62,33 @@
 
     <section class="filtrar">
 
-         <button>FILTRAR PRODUCTOS <img src="imagenes/precios/filtro.png" alt="" width="5%"></button>
+        <button class="filtrar__collapsible">FILTRAR PRODUCTOS <img src="imagenes/precios/filtro.png" alt=""
+                width="5%"></button>
 
-        <input type="checkbox" href="/precios?empleados=5"> <a href="/precios?empleados=5">5 empleados</a><br>
-        <input type="checkbox" href="/precios?empleados=10"> <a href="/precios?empleados=10">10 empleados</a> <br>
-        <input type="checkbox" href="/precios?empleados=15"> <a href="/precios?empleados=15">15 empleados</a> <br>
-        <input type="checkbox" href="/precios?empleados=15&5&10"> <a href="/precios?empleados=15&5&10">todos</a> <br>
+        <div class="filtrar__content">
+            <div class="filtrar__content">
+                <h2>Empleados</h2>
 
-        <a href="/precios?horas=10">10 horas</a>
-        <a href="/precios?horas=15">15 horas</a>
-        <a href="/precios?horas=20">20 horas</a>
+                <input type="checkbox" href="/precios?empleados=5"> <a href="/precios?empleados=5">5 empleados</a><br>
+                <input type="checkbox" href="/precios?empleados=10"> <a href="/precios?empleados=10">10 empleados</a>
+                <br>
+                <input type="checkbox" href="/precios?empleados=15"> <a href="/precios?empleados=15">15 empleados</a>
+                <br>
+                <input type="checkbox" href="/precios?empleados=15&5&10"> <a href="/precios?empleados=15&5&10">todos</a>
+                <br>
 
-        <a href="/precios?transac=25">25 transacciones</a>
-        <a href="/precios?transac=50">50 transacciones</a>
-        <a href="/precios?transac=100">100 transacciones</a>
-        <a href="/precios?transac=500">500 transacciones</a>
+                <h2>Horas</h2>
+                <a href="/precios?horas=10">10 horas</a>
+                <a href="/precios?horas=15">15 horas</a>
+                <a href="/precios?horas=20">20 horas</a>
 
-        
-
+                <h2>Transacciones</h2>
+                <a href="/precios?transac=25">25 transacciones</a>
+                <a href="/precios?transac=50">50 transacciones</a>
+                <a href="/precios?transac=100">100 transacciones</a>
+                <a href="/precios?transac=500">500 transacciones</a>
+            </div>
+        </div>
     </section>
 
     <section class="paquetes">
@@ -197,7 +206,7 @@
                 <button id="agregarEsta" class="armando__productos__info btn">+</button>
             </div>
 
-            <h1 id="costo">Costo estimado: </h1>
+            <h3 id="costo"><b>Costo estimado: </b> $<span id="valor"></span></h3>
         </div>
 
         <div class="armando__informacion">

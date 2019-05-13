@@ -69,24 +69,28 @@
                  <button onclick="history.back(-1)" > < Volver a precios</button>
         <h1>Detalles de Pago</h1>
 
-        <input type="text" id="fname" name="firstname" placeholder="Escribe tu nombre">
+        <form action="/login" method="POST">
+
+        <input type="text" name="comprador" placeholder="Escribe tu nombre">
         <h3>NOMBRE DEL COMPRADOR</h3>
 
-        <input type="text" id="fname" name="firstname" placeholder="Escribe tu número de documento">
+        <input type="text" name="cedula" placeholder="Escribe tu número de documento">
         <h3>NÚMERO DE CÉDULA</h3>
 
         
-        <input type="text" id="fname" name="firstname" placeholder="Número de tarjeta">
+        <input type="text" name="tarjeta" placeholder="Número de tarjeta">
         <h3>NÚMERO DE TARJETA</h3>
 
         
-        <input type="text" id="fname" name="firstname" placeholder="Fecha de expiración">
+        <input type="text" name="expiracion" placeholder="Fecha de expiración">
         <h3>FECHA DE EXPIRACIÓN</h3>
 
         
-        <input type="text" id="fname" name="firstname" placeholder="Dirección">
+        <input type="text" name="direccion" placeholder="Dirección">
         <h3>DIRECCIÓN</h3>
 
+        <input class="input-productos" type="hidden" name="enviaproduct" value="">
+</form>
 
         </div>
 
@@ -96,7 +100,7 @@
         </div>
     </section>
 
-
+<script src="/js/pagos.js"></script>
     
 </body>
 </html>

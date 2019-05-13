@@ -10,13 +10,16 @@ agregarUser.addEventListener('click', agregarUsuario);
 
 function agregarUsuario() {
     valorUsuario++;
+    cotizar();
     usuario.innerHTML = valorUsuario;
 }
 
 quitarUser.addEventListener('click', quitarUsuario);
 
 function quitarUsuario() {
+    
     valorUsuario--;
+    cotizar();
 
     if (valorUsuario < 0) {
         valorUsuario = 0;
@@ -36,6 +39,7 @@ agregarTrans.addEventListener('click', agregarTransaccion);
 
 function agregarTransaccion() {
     valorTrans++;
+    cotizar();
     transaccion.innerHTML = valorTrans;
 }
 
@@ -43,6 +47,7 @@ quitarTrans.addEventListener('click', quitarTransaccion);
 
 function quitarTransaccion() {
     valorTrans--;
+    cotizar();
 
     if (valorTrans < 0) {
         valorTrans = 0;
@@ -63,13 +68,14 @@ agregarNom.addEventListener('click', agregarNomina);
 function agregarNomina() {
     valorNomina++;
     nomina.innerHTML = valorNomina;
+    cotizar();
 }
 
 quitarNom.addEventListener('click', quitarNomina);
 
 function quitarNomina() {
     valorNomina--;
-
+    cotizar();
     if (valorNomina < 0) {
         valorNomina = 0;
     }
@@ -89,12 +95,14 @@ agregarEst.addEventListener('click', agregarEstacion);
 function agregarEstacion() {
     valorEst++;
     estacion.innerHTML = valorEst;
+    cotizar();
 }
 
 quitarEst.addEventListener('click', quitarEstacion);
 
 function quitarEstacion() {
     valorEst--;
+    cotizar();
 
     if (valorEst < 0) {
         valorEst = 0;
@@ -114,6 +122,9 @@ var data = {};
 
 function cotizar() {
 
+var btnCotizar = document.querySelector('#valor');
+
+
     var precioUsuario = valorUsuario * 20000;
     var precioTransaccion = valorTrans * 300;
     var precioNomina = valorNomina * 3000;
@@ -121,6 +132,24 @@ function cotizar() {
 
     precio = precioUsuario + precioTransaccion + precioNomina + precioEstacion;
     console.log(precio);
+    btnCotizar.innerHTML = precio;
     data = {pr: precio};
 
+}
+
+//Boton para abrir collapse
+
+var coll = document.getElementsByClassName("filtrar__collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var filtrar__content = this.nextElementSibling;
+    if (filtrar__content.style.maxHeight){
+        filtrar__content.style.maxHeight = null;
+    } else {
+        filtrar__content.style.maxHeight = filtrar__content.scrollHeight + "px";
+    } 
+  });
 }

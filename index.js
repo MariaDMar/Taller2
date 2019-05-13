@@ -91,6 +91,30 @@ app.get('/pagos', function (req, res) {
         precio: req.query.precio,
     }
     res.render('pagos', contexto);
+
+});
+
+//pagina para guardar información de pagos en base de datos
+app.post('/login', function(req, res){
+
+    console.log(req.body);
+
+    var pedido = {
+        comprador: req.body.comprador,
+        cedula: req.body.cedula,
+        fecha: new Date(),
+        estado: 'nuevo',
+        productos: JSON.parse(req.body.productos)
+    };
+
+    var collection = db.collection('pedidos');
+    collection.insertOne(pedido,function(err){
+        assert.equal(err,null);
+        console.log('pedido guardado');
+        
+    });
+    response.redirect('/');
+
 });
 
 //PAGINA PERSONALIZAR

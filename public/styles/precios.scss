@@ -274,7 +274,7 @@ body{
             font-size: 16px;
         }
     }
-
+    
     .filtrar{
         display: flex;
         flex-direction: row;
@@ -284,28 +284,58 @@ body{
         align-items: flex-start;
         flex-shrink: 0;
         width: 80%;
-        height: auto;
+        height: 10%;
         margin-top: 20%;
-
-        button{
+        
+        &__collapsible{
             
-            width: 266px;
-            height: 39px;
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 16px;
-            line-height: 22px;
-            color: #09374C;
-            margin-left: 15px;
-            background: none;
-            border: 2px solid #00DD80;
-            box-sizing: border-box;
-            border-radius: 40px;
-            margin-top: 80px;
-        }
-    }
+                width: 266px;
+                height: 39px;
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 22px;
+                color: #09374C;
+                margin-left: 15px;
+                background: none;
+                border: 2px solid #00DD80;
+                box-sizing: border-box;
+                border-radius: 40px;
+                margin-top: 80px;
+                outline: none;
+                cursor: pointer;
 
+        }
+
+        .active, .filtrar__collapsible:hover{
+            background: #09374C;
+        }
+        
+        &__content{
+            
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+
+            &__inputs{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-content: flex-start;
+                align-items: flex-start;
+                flex-shrink: 0;
+                width: 80%;
+                height: auto;
+            }
+        }
+        
+        
+    }
+    
     .paquetes{   
         display: flex;
         flex-direction: column;
@@ -469,7 +499,7 @@ body{
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
                 align-self: center;
                 margin-bottom: 10px;
-
+                
                 &__lista{
                     margin-left: 10px;
                     color: #00DD80;
@@ -591,7 +621,17 @@ body{
                 font-size: 16px;
             }
             
-            
+            h3{
+                display: flex;
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 300;
+                text-align: center;
+                color: #09374C;
+                margin-top: 15px;
+                font-size: 16px;
+                margin-left: 15%;
+            }
             
             h1{
                 text-align: center;
@@ -734,17 +774,12 @@ body{
         }
     }
     
-    
-    
-    
-    
     .personalizado{
         margin-top: 500px;
     }
     
-       
     @media(max-width:860px){
-                            
+        
         .nav{
             
             &__header{
@@ -778,51 +813,55 @@ body{
                 display: flex;
             }
         } 
-
+        
         .titulos{
             width: 80%;
-
+            
+        }
+        
+        .filtrar{
+            margin-top: 50%;
         }
         .titulosp{
             width: 70%;
-            margin-top: -15%;
         }
-
+        
         .paquetes{
             margin-top: 20%;
         }
         .armando{
-
+            
             &__productos{
                 width: 100%;
                 margin-top: 25%;
-            &__info{
-                width: 60%;
+                &__info{
+                    width: 100%;
+                    
+                    flex-direction: row;
+                    img{
+                        width: 40%;
+                    }
+                    
+                    button{
+                        align-content: center;
+                    }
+                    
+                    &__texto{
+                        width: 60%;
+                        flex-direction: column;
+                        align-content: center;
+                        align-items: center;
+                    }
+                }
                 
-                flex-direction: row;
-                img{
-                    width: 40%;
-                }
-
-                button{
-                    align-content: center;
-                }
-
-                &__texto{
-                    width: 50%;
-                    align-content: center;
-                    align-items: center;
-                }
             }
-
-        }
-
+            
             &__informacion{
                 width: 100%;
             }
         }
-         
-
-
-
+        
+        
+        
+        
     }
