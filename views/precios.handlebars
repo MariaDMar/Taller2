@@ -59,17 +59,32 @@
         <h2>Escoge las funciones que tu equipo de trabajo está necesitando actualmente. Haz crecer con facilidad tu
             negocio</h2>
     </section>
+
+    <section class="filtrar">
+
+         <button>FILTRAR PRODUCTOS <img src="imagenes/precios/filtro.png" alt="" width="5%"></button>
+
+        <input type="checkbox" href="/precios?empleados=5"> <a href="/precios?empleados=5">5 empleados</a><br>
+        <input type="checkbox" href="/precios?empleados=10"> <a href="/precios?empleados=10">10 empleados</a> <br>
+        <input type="checkbox" href="/precios?empleados=15"> <a href="/precios?empleados=15">15 empleados</a> <br>
+        <input type="checkbox" href="/precios?empleados=15&5&10"> <a href="/precios?empleados=15&5&10">todos</a> <br>
+
+        <a href="/precios?horas=10">10 horas</a>
+        <a href="/precios?horas=15">15 horas</a>
+        <a href="/precios?horas=20">20 horas</a>
+
+        <a href="/precios?transac=25">25 transacciones</a>
+        <a href="/precios?transac=50">50 transacciones</a>
+        <a href="/precios?transac=100">100 transacciones</a>
+        <a href="/precios?transac=500">500 transacciones</a>
+
+        
+
+    </section>
+
     <section class="paquetes">
 
-       <!-- <a href="/precios?empleados=5">5</a> -->
-         <!-- <a href="/precios?empleados=10">10</a>  -->
-       <!--   <a href="/precios?empleados=15">15</a> -->
-        <input type="checkbox"> <a href="/precios?empleados=5">5</a><br>
-        <input type="checkbox"> <a href="/precios?empleados=10">10</a> <br>
-        <input type="checkbox"> <a href="/precios?empleados=15">15</a> <br>
 
-
-        <button>FILTRAR PRODUCTOS <img src="imagenes/precios/filtro.png" alt="" width="5%"></button>
         <div class="paquetes__item">
 
             {{#each productos}}
@@ -83,6 +98,7 @@
                     {{#each incluye}}
                     <li>{{this}}<img src="imagenes/precios/check.png" alt="" width="5%"></li>
                     {{/each}}
+                    <li><b>{{transac}}</b> transacciones <img src="imagenes/precios/check.png" alt="" width="5%"></li>
                 </ul>
                 <button><a href="/pagos?nombre={{nombre}}&precio={{precio}}">COMPRAR</a></button>
                 <ul>
@@ -101,6 +117,8 @@
                     {{#each incluye}}
                     <li>{{this}}<img src="imagenes/precios/check.png" alt="" width="5%"></li>
                     {{/each}}
+                    <li><b>{{transac}}</b> transacciones <img src="imagenes/precios/check.png" alt="" width="5%"></li>
+
                 </ul>
                 <button><a href="/pagos?nombre={{nombre}}&precio={{precio}}">COMPRAR</a></button>
                 <ul>
@@ -186,7 +204,7 @@
             <h1>Datos para cotización</h1>
             <input type="text" placeholder="Escribe tu correo">
             <h3>CORREO</h3>
-            <input type="number" placeholder="Escribe tu teléfono" name="number">
+            <input type="text" placeholder="Escribe tu teléfono" name="number">
             <h3>TELEFONO</h3>
             <input type="text" placeholder="Escribe tu dirección">
             <h3>DIRECCION</h3>

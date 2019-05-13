@@ -55,6 +55,14 @@ app.get('/precios', function (req, res) {
         query.empleados = parseInt(req.query.empleados);
     }
 
+    if(req.query.transac){
+        query.transac = parseInt(req.query.transac);
+    }
+
+    if(req.query.horas){
+        query.horas = parseInt(req.query.horas);
+    }
+
 
 
     const collectionPaquetes = db.collection('paquetes');
