@@ -94,27 +94,30 @@ app.get('/precios', function (req, res) {
 });
 
 //PARA PRODUCTOS ARMADOS
-
 app.post('/entrando', function(req, res){
-    console.log('q hubo');
+    console.log(req.body.enviaproducto);
     console.log(req.body);
+     var r = req.body.enviaproducto;
+
     var pedido = {
-        comprador: req.body.comprador,
-        cedula: req.body.cedula,
+        correo: req.body.comprador,
+        telefono: req.body.cedula,
         fecha: new Date(),
         estado: 'nuevo',
-        productos: 'proooods'
+        direccion: req.body.direccion,
+        precio: r
     };
     
-    var collection = db.collection('pedidos');
-    collection.insertOne(pedido,function(err){
+    var collection = db.collection('pedidosArmando');
+    collection.insertOne(pedidoArmando,function(err){
         assert.equal(err,null);
         console.log('pedido guardado');
         
     });
-    res.redirect('/');
+
     
 });
+
 
 //configurar pagina de pagos
 
@@ -150,6 +153,7 @@ app.post('/login', function(req, res){
     res.redirect('/');
     
 });
+
 
 //PAGINA PERSONALIZAR
 

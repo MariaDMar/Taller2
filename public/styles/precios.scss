@@ -351,7 +351,7 @@ body{
     }
     
     .active, .filtrar__collapsible:hover{
-        background: #00DD80;
+        
     }
     
     .paquetes{   
@@ -843,14 +843,22 @@ body{
             &__collapsible{
                 margin-top: 80%;
             }
+            &__content{
+                width: 100%;
+                margin-top: 10%;
+
+                &__casillas{
+                    width: 100%;
+                }
+            }
         }
         .titulosp{
             width: 70%;
-            margin-top: 40%
+         
         }
         
         .paquetes{
-            margin-top: 20%;
+            margin-top: 10%;
         }
         .armando{
             
