@@ -93,6 +93,29 @@ app.get('/precios', function (req, res) {
     
 });
 
+//PARA PRODUCTOS ARMADOS
+
+app.post('/entrando', function(req, res){
+    console.log('q hubo');
+    console.log(req.body);
+    var pedido = {
+        comprador: req.body.comprador,
+        cedula: req.body.cedula,
+        fecha: new Date(),
+        estado: 'nuevo',
+        productos: 'proooods'
+    };
+    
+    var collection = db.collection('pedidos');
+    collection.insertOne(pedido,function(err){
+        assert.equal(err,null);
+        console.log('pedido guardado');
+        
+    });
+    res.redirect('/');
+    
+});
+
 //configurar pagina de pagos
 
 app.get('/pagos', function (req, res) { 
@@ -106,14 +129,16 @@ app.get('/pagos', function (req, res) {
 
 //pagina para guardar información de pagos en base de datos
 app.post('/login', function(req, res){
-    console.log('q hubo');
+    console.log(req.body.enviaproduct);
     console.log(req.body);
+     var r = req.body.enviaproduct;
+
     var pedido = {
         comprador: req.body.comprador,
         cedula: req.body.cedula,
         fecha: new Date(),
         estado: 'nuevo',
-        productos: 'proooods'
+        productos: r
     };
     
     var collection = db.collection('pedidos');

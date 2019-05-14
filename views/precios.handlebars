@@ -99,7 +99,7 @@
             {{#each productos}}
             {{#if especial}}
             <div class="paquetes__item basico">
-                <h3>{{nombre}}</h3>
+                <h3 id="nombrePaquete">{{nombre}}</h3>
                 <h4>Empieza desde</h4>
                 <h1>${{precio}}/mes</h1>
                 <ul>
@@ -109,7 +109,7 @@
                     {{/each}}
                     <li><b>{{transac}}</b> transacciones <img src="imagenes/precios/check.png" alt="" width="5%"></li>
                 </ul>
-                <button id="btnComprar"><a href="/pagos?nombre={{nombre}}&precio={{precio}}">COMPRAR</a></button>
+                <button class="btnComp" data-name={{nombre}}><a href="/pagos?nombre={{nombre}}&precio={{precio}}">COMPRAR</a></button>
                 <ul>
                     <li><b>{{empleados}}</b> empleados en nómina</li>
                     <li><b>{{horas}}</b> horas de soporte</li>
@@ -129,7 +129,7 @@
                     <li><b>{{transac}}</b> transacciones <img src="imagenes/precios/check.png" alt="" width="5%"></li>
 
                 </ul>
-                <button id="btnComprar"><a href="/pagos?nombre={{nombre}}&precio={{precio}}">COMPRAR</a></button>
+                <button class="btnComp" data-name={{nombre}}><a href="/pagos?nombre={{nombre}}&precio={{precio}}">COMPRAR</a></button>
                 <ul>
                     <li><b>{{empleados}}</b> empleados en nómina</li>
                     <li><b>{{horas}}</b> horas de soporte</li>
@@ -210,14 +210,16 @@
         </div>
 
         <div class="armando__informacion">
+            <form action="/entrando" method="POST">
             <h1>Datos para cotización</h1>
-            <input type="text" placeholder="Escribe tu correo">
+            <input type="text" placeholder="Escribe tu correo" name="correo">
             <h3>CORREO</h3>
             <input type="text" placeholder="Escribe tu teléfono" name="number">
             <h3>TELEFONO</h3>
-            <input type="text" placeholder="Escribe tu dirección">
+            <input type="text" placeholder="Escribe tu dirección" name="direccion">
             <h3>DIRECCION</h3>
             <button id="btnCotizame">Cotizar</button>
+            </form>
         </div>
 
     </section>

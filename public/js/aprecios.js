@@ -1,9 +1,16 @@
-var btnComprar = document.querySelector('#btnComprar');
+var btnComprar = document.querySelectorAll('.btnComp');
 var nombrePaquete = document.querySelector('#nombrePaquete').innerHTML;
 
-btnComprar.addEventListener('click', ()=>{localStorage.setItem('listaProductos', JSON.stringify(nombrePaquete))})
-
-
+for (let i = 0; i < btnComprar.length; i++) {
+    const elem = btnComprar[i];
+    elem.addEventListener('click', ()=>{
+        var x = elem.getAttribute('data-name');
+        console.log(x);
+        console.log("ldodsuhifusdnvius");
+        localStorage.setItem('listaProductos', JSON.stringify(x));
+    
+    })   
+}
 /* Interacción Usuario */
 
 var agregarUser = document.querySelector('#agregarUsuario');
