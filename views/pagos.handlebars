@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pagar</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400, 600, 700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/styles/pagos.css">
 </head>
+
 <body>
-<!--
+    <!--
     <nav class="nav">
 
         <header class="nav__header">
@@ -55,52 +57,45 @@
 
     <section class="cuerpo">
         <div class="cuerpo__izq">
-             
-                    <div class="cuerpo__izq contenido">
-            <h1><b>{{nombre}}</b></h1>
-            <h1>${{precio}}/mes</h1>
-            <img src="imagenes/pagos/person.png" alt="" width="150%">
-       
-        </div>
+
+            <div class="cuerpo__izq contenido">
+                <h1><b>{{nombre}}</b></h1>
+                <h1>${{precio}}/mes</h1>
+                <img src="imagenes/pagos/person.png" alt="" width="150%">
+
+            </div>
         </div>
 
         <div class="cuerpo__der">
-             <div class="cuerpo__der contenido">
-                 <button onclick="history.back(-1)" > < Volver a precios</button>
-        <h1>Detalles de Pago</h1>
 
-        <form action="/login" method="POST">
+            <button onclick="history.back(-1)" class="cuerpo__der__btn">
+                    < Volver a precios</button> 
+            <div class="cuerpo__der contenido">
+                
+                    <h1>Detalles de Pago</h1>
 
-        <input type="text" name="comprador" placeholder="Escribe tu nombre">
-        <h3>NOMBRE DEL COMPRADOR</h3>
+                        <form action="/login" method="POST">
 
-        <input type="text" name="cedula" placeholder="Escribe tu número de documento">
-        <h3>NÚMERO DE CÉDULA</h3>
+                            <input type="text" name="comprador" placeholder="Escribe tu nombre">
+                            <h3>NOMBRE DEL COMPRADOR</h3>
+                            <input type="text" name="cedula" placeholder="Escribe tu número de documento">
+                            <h3>NÚMERO DE CÉDULA</h3>
+                            <input type="text" name="tarjeta" placeholder="Número de tarjeta">
+                            <h3>NÚMERO DE TARJETA</h3>
+                            <input type="text" name="expiracion" placeholder="Fecha de expiración">
+                            <h3>FECHA DE EXPIRACIÓN</h3>
+                            <input type="text" name="direccion" placeholder="Dirección">
+                            <h3>DIRECCIÓN</h3>
+                            <input class="input-productos" type="hidden" name="enviaproduct" value="">
+                            <button id="btnPagar">Pagar</button>
+                        </form>
 
-        
-        <input type="text" name="tarjeta" placeholder="Número de tarjeta">
-        <h3>NÚMERO DE TARJETA</h3>
-
-        
-        <input type="text" name="expiracion" placeholder="Fecha de expiración">
-        <h3>FECHA DE EXPIRACIÓN</h3>
-
-        
-        <input type="text" name="direccion" placeholder="Dirección">
-        <h3>DIRECCIÓN</h3>
-
-        <input class="input-productos" type="hidden" name="enviaproduct" value="">
-</form>
-
-        </div>
-
-         <div class="cuerpo__der pago">
-             <h2>PAGAR</h2>
-         </div>
+            </div>
         </div>
     </section>
 
-<script src="/js/pagos.js"></script>
-    
+    <script src="/js/pagos.js"></script>
+
 </body>
+
 </html>

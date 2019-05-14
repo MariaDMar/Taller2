@@ -233,7 +233,7 @@ body{
             flex-direction: column;
             justify-content: flex-start;
             width: 40%;
-            height: 800px;
+           
             align-content: center;
             align-items: center;
             background:#37B5F4;
@@ -248,7 +248,7 @@ body{
                 height: auto;
                 align-content: center;
                 align-items: center;
-                
+                height: 734px;
                 
                 h1{
                     
@@ -261,7 +261,6 @@ body{
                     align-items: center;
                     text-align: center;
                     color: #FFFFFF;
-                    margin-top: 20%;
                     
                 }
                 
@@ -286,15 +285,35 @@ body{
             align-items: flex-start;
             background: white;
 
-            button{
-                background: none;
-                text-decoration: none;  
+            form{
+                width: 80%;
             }
 
-            button{
-                background: none;
-                text-decoration: none;  
+            &__btn{
+              
+                    width: 183px;
+                        height: 40px;
+                        left: 114px;
+                        top: 610px;
+                        background: none;
+                        border: none;
+                        
+                        font-family: Open Sans;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size:16px;
+                        line-height: 27px;
+                        text-align: center;
+                        
+                        color: rgb(117, 117, 117);
+                        margin-top: 10%;
+                        margin-left: 8%;
+                
+    
             }
+            
+
+
             input[type=button] {
                 
                 background: none;
@@ -313,11 +332,31 @@ body{
                 align-content: flex-start;
                 align-items: flex-start;
                 margin-left: 10%;
-                
+
                 button{
-                    background: none;
-                    text-decoration: none;  
+                    width: 183px;
+                    height: 40px;
+                    left: 114px;
+                    top: 610px;
+                    background: rgb(15, 55, 139);
+                    border: 2px solid rgb(15, 55, 139);
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    
+                    font-family: Open Sans;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 27px;
+                    text-align: center;
+                    
+                    color: #FFFFFF;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                    
                 }
+                
+               
                 input[type=button] {
                     
                     background: none;
@@ -326,14 +365,12 @@ body{
                 
                 
                 h1{
-                    
-                    
-                    margin-top: 10%;
+                 
                     font-family: 'Open Sans', sans-serif;
                     font-weight: 600;
                     font-size: 30px;
                     text-align: left;
-                    
+                    margin-top: 10%;
                     color:  rgb(15, 55, 139);
                 }
                 
@@ -346,7 +383,7 @@ body{
                     font-weight: 300;
                     font-size: 16px;
                     text-align: left;
-                    margin-top: 5%;
+                    margin-top: 2%;
                 }
                 
                 h3{
@@ -370,7 +407,7 @@ body{
                 justify-content: center;
                 align-content: center;
                 align-items: center;
-                margin-top: 5%;
+                margin-top: 12%;
                 
                 h2{
                     font-family: 'Open Sans', sans-serif;
@@ -411,6 +448,10 @@ body{
                 }
                 width: 100%;
                 height: auto;
+
+                .contenido{
+                    width: 80%;
+                }
             }
         }
     }

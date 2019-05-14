@@ -1,3 +1,9 @@
+var btnComprar = document.querySelector('#btnComprar');
+var nombrePaquete = document.querySelector('#nombrePaquete').innerHTML;
+
+btnComprar.addEventListener('click', ()=>{localStorage.setItem('listaProductos', JSON.stringify(nombrePaquete))})
+
+
 /* Interacción Usuario */
 
 var agregarUser = document.querySelector('#agregarUsuario');

@@ -109,7 +109,7 @@
                     {{/each}}
                     <li><b>{{transac}}</b> transacciones <img src="imagenes/precios/check.png" alt="" width="5%"></li>
                 </ul>
-                <button><a href="/pagos?nombre={{nombre}}&precio={{precio}}">COMPRAR</a></button>
+                <button id="btnComprar"><a href="/pagos?nombre={{nombre}}&precio={{precio}}">COMPRAR</a></button>
                 <ul>
                     <li><b>{{empleados}}</b> empleados en nómina</li>
                     <li><b>{{horas}}</b> horas de soporte</li>
@@ -118,7 +118,7 @@
             </div>
             {{else}}
             <div class="paquetes__item contable">
-                <h3>{{nombre}}</h3>
+                <h3 id="nombrePaquete">{{nombre}}</h3>
                 <h4>Empieza desde</h4>
                 <h1>${{precio}}/mes</h1>
                 <ul>
@@ -129,7 +129,7 @@
                     <li><b>{{transac}}</b> transacciones <img src="imagenes/precios/check.png" alt="" width="5%"></li>
 
                 </ul>
-                <button><a href="/pagos?nombre={{nombre}}&precio={{precio}}">COMPRAR</a></button>
+                <button id="btnComprar"><a href="/pagos?nombre={{nombre}}&precio={{precio}}">COMPRAR</a></button>
                 <ul>
                     <li><b>{{empleados}}</b> empleados en nómina</li>
                     <li><b>{{horas}}</b> horas de soporte</li>

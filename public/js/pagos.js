@@ -1,12 +1,14 @@
 window.addEventListener('load', function(){
     var form = document.querySelector('form');
-    function enviarProductos(evento){
-        evento.preventDefault();
-        console.log("hola");
+
+    form.addEventListener('submit', ()=>{
+        cevento.preventDefault();
         var input = document.querySelector('.input-productos');
-        input.value = 'productos';
+        input.value = localStorage.getItem('listaProductos');
+
+        console.log("hoooola");
+    });
         //si tengo que enviar texto entonces input.value = JSON.stringify
-    localStorage.removerItem('listaProductos');
-    }
-    form.addEventListener('submit', enviarProductos);
+    //localStorage.removerItem('listaProductos');
+    
 });

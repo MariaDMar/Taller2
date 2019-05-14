@@ -822,10 +822,13 @@ body{
         }
         
         .filtrar{
-            margin-top: 50%;
+            &__collapsible{
+            margin-top: 80%;
+        }
         }
         .titulosp{
             width: 70%;
+            margin-top: 40%
         }
         
         .paquetes{
@@ -841,7 +844,7 @@ body{
                 margin-top: 25%;
 
                 &__info{
-                    width: 70%;
+                    width: 68%;
                     flex-direction: row;
                     img{
                         width: 40%;
@@ -863,6 +866,7 @@ body{
             
             &__informacion{
                 width: 100%;
+                margin-top: 10%;
             }
         }
         
