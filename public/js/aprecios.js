@@ -25,6 +25,7 @@ function agregarUsuario() {
     valorUsuario++;
     cotizar();
     usuario.innerHTML = valorUsuario;
+    actualizarPedido();
 }
 
 quitarUser.addEventListener('click', quitarUsuario);
@@ -38,6 +39,7 @@ function quitarUsuario() {
         valorUsuario = 0;
     }
     usuario.innerHTML = valorUsuario;
+    actualizarPedido();
 }
 
 /* Interacción Transacciones */
@@ -54,6 +56,7 @@ function agregarTransaccion() {
     valorTrans++;
     cotizar();
     transaccion.innerHTML = valorTrans;
+    actualizarPedido();
 }
 
 quitarTrans.addEventListener('click', quitarTransaccion);
@@ -66,6 +69,7 @@ function quitarTransaccion() {
         valorTrans = 0;
     }
     transaccion.innerHTML = valorTrans;
+    actualizarPedido();
 }
 
 /* Interacción Nómina */
@@ -82,6 +86,7 @@ function agregarNomina() {
     valorNomina++;
     nomina.innerHTML = valorNomina;
     cotizar();
+    actualizarPedido();
 }
 
 quitarNom.addEventListener('click', quitarNomina);
@@ -93,6 +98,7 @@ function quitarNomina() {
         valorNomina = 0;
     }
     nomina.innerHTML = valorNomina;
+    actualizarPedido();
 }
 
 /* Interacción Estaciones */
@@ -109,6 +115,7 @@ function agregarEstacion() {
     valorEst++;
     estacion.innerHTML = valorEst;
     cotizar();
+    actualizarPedido();
 }
 
 quitarEst.addEventListener('click', quitarEstacion);
@@ -121,6 +128,8 @@ function quitarEstacion() {
         valorEst = 0;
     }
     estacion.innerHTML = valorEst;
+
+    actualizarPedido();
 }
 
 /*PLUS*/
@@ -148,6 +157,34 @@ var btnCotizar = document.querySelector('#valor');
     btnCotizar.innerHTML = precio;
     data = {pr: precio};
 
+}
+
+
+//form
+
+var inputNomina = document.querySelector('#input-nNomina');
+var inputTrans = document.querySelector('#input-nTrans');
+var inputUsuarios = document.querySelector('#input-nUsuarios');
+var inputEst = document.querySelector('#input-nEstaciones');
+var inputPrecio = document.querySelector('#input-precio');
+
+function actualizarPedido(){
+    inputNomina.value = valorNomina;
+    inputTrans.value = valorTrans;
+    inputUsuarios.value = valorUsuario;
+    inputEst.value = valorEst;
+
+    var precioPedido = 0;
+
+    var precioUsuario = valorUsuario * 20000;
+    var precioTransaccion = valorTrans * 300;
+    var precioNomina = valorNomina * 3000;
+    var precioEstacion = valorEst * 35000;
+
+    precioPedido = precioUsuario + precioTransaccion + precioNomina + precioEstacion;
+
+
+    inputPrecio.value = precioPedido;
 }
 
 

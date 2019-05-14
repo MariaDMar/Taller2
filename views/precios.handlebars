@@ -218,16 +218,20 @@
             <h3 id="costo"><b>Costo estimado: </b> $<span id="valor"></span></h3>
         </div>
 
-        <div class="armando__informacion">
+        <form action="/cotizar" method="POST" class="armando__informacion">
           <!--  <form action="/entrando" method="POST">-->
                 <h1>Datos para cotización</h1>
-                <input type="text" placeholder="Escribe tu correo" name="correo">
+                <input type="email" placeholder="Escribe tu correo" name="correo">
                 <h3>CORREO</h3>
                 <input type="text" placeholder="Escribe tu teléfono" name="number">
                 <h3>TELEFONO</h3>
                 <input type="text" placeholder="Escribe tu dirección" name="direccion">
                 <h3>DIRECCION</h3>
-                <input class="input-productos" type="hidden" name="enviaproducto" value="">
+                <input id="input-nNomina" type="hidden" name="nNomina" value="">
+                <input id="input-nTrans" type="hidden" name="nTrans" value="">
+                <input id="input-nUsuarios" type="hidden" name="nUsuarios" value="">
+                <input id="input-nEstaciones" type="hidden" name="nEstaciones" value="">
+                <input id="input-precio" type="hidden" name="nPrecio" value="">
 
                 <button id="btnCotizame">Cotizar</button>
             <!-- </form>-->

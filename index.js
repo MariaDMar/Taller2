@@ -38,10 +38,10 @@ const client = new MongoClient(url, { useNewUrlParser: true });
 var db = null;
 
 // Use connect method to connect to the Server
-client.connect(function(err) {
+client.connect(function (err) {
     assert.equal(null, err);
     console.log("Connected successfully to server");
-    
+
     db = client.db(dbName);
 });
 
@@ -55,42 +55,42 @@ app.get('/', function (req, res) {
 var paquetes = require('./productos')
 //MI PAGINA DE PRECIOSSSSS
 app.get('/precios', function (req, res) {
-    
+
     const collection = db.collection('productos');
-    
-    
+
+
     var query = {};
-    
-    if(req.query.empleados){
+
+    if (req.query.empleados) {
         query.empleados = parseInt(req.query.empleados);
     }
-    
-    if(req.query.transac){
+
+    if (req.query.transac) {
         query.transac = parseInt(req.query.transac);
     }
-    
-    if(req.query.horas){
+
+    if (req.query.horas) {
         query.horas = parseInt(req.query.horas);
     }
-    
-    
-    
+
+
+
     const collectionPaquetes = db.collection('paquetes');
     //recorre base de datos
-    
-    collectionPaquetes.find(query).toArray(function(err, docs) {
+
+    collectionPaquetes.find(query).toArray(function (err, docs) {
         assert.equal(err, null);
-        
+
         var contexto = {
             titulo: 'titulo',
             productos: docs
         }
-        
+
         res.render('precios', contexto);
-        
+
         console.log('leyo precios');
     });
-    
+
 });
 
 //PARA PRODUCTOS ARMADOS 
@@ -121,20 +121,20 @@ app.get('/precios', function (req, res) {
 
 //configurar pagina de pagos
 
-app.get('/pagos', function (req, res) { 
+app.get('/pagos', function (req, res) {
     var contexto = {
         nombre: req.query.nombre,
         precio: req.query.precio,
     }
     res.render('pagos', contexto);
-    
+
 });
 
 //pagina para guardar información de pagos en base de datos
-app.post('/login', function(req, res){
+app.post('/login', function (req, res) {
     console.log(req.body.enviaproduct);
     console.log(req.body);
-     var r = req.body.enviaproduct;
+    var r = req.body.enviaproduct;
 
     var pedido = {
         comprador: req.body.comprador,
@@ -143,36 +143,36 @@ app.post('/login', function(req, res){
         estado: 'nuevo',
         productos: r
     };
-    
+
     var collection = db.collection('pedidos');
-    collection.insertOne(pedido,function(err){
-        assert.equal(err,null);
+    collection.insertOne(pedido, function (err) {
+        assert.equal(err, null);
         console.log('pedido guardado');
-        
+
     });
     res.redirect('/');
-    
+
 });
 
 
 //PAGINA PERSONALIZAR
 
 app.get('/personalizar', function (req, res) {
-    
+
     var contexto = {
     }
-    
-    
+
+
     res.render('personalizar', contexto);
-    
+
 });
 
 app.get('/cotizar', function (req, res) {
-    
+
     var contexto = {
-        
+
     }
-    
+
     res.render('precio', contexto);
 });
 
@@ -180,12 +180,30 @@ app.get('/cotizar', function (req, res) {
 //configurar la ruta inicial
 
 app.post('/cotizar', function (req, res) {
-    
-    var precio = req.body.pr;
-    
-    console.log(precio);
-    
-    res.redirect('/precio');
+
+    console.log(req.body);
+
+    //agregar base de datos
+    var pedido = {
+        correo: req.body.correo,
+        numero: req.body.numero,
+        direccion: req.body.direccion,
+        fecha: new Date(),
+        nNomina: req.body.nNomina,
+        nTrans: req.body.nTrans,
+        nUsuarios: req.body.nUsuarios,
+        nEstaciones: req.body.nEstaciones,
+        nPrecio: req.body.nPrecio,
+    };
+
+    var collection = db.collection('perdidosPersonalizados');
+    collection.insertOne(pedido, function (err) {
+        assert.equal(err, null);
+        console.log('pedido personalizado guardado');
+
+    });
+
+    setTimeout(function () { res.redirect('/precios') }, 3000);
 });
 
 app.listen(3000, function () {
