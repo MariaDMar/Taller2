@@ -93,8 +93,8 @@ app.get('/precios', function (req, res) {
     
 });
 
-//PARA PRODUCTOS ARMADOS
-app.post('/entrando', function(req, res){
+//PARA PRODUCTOS ARMADOS 
+/*app.post('/entrando', function(req, res){
     console.log(req.body.enviaproducto);
     console.log(req.body);
      var r = req.body.enviaproducto;
@@ -116,7 +116,7 @@ app.post('/entrando', function(req, res){
     });
 
     
-});
+}); */
 
 
 //configurar pagina de pagos
