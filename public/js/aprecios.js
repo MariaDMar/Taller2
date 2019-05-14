@@ -150,19 +150,4 @@ var btnCotizar = document.querySelector('#valor');
 
 }
 
-//Boton para abrir collapse
 
-var coll = document.getElementsByClassName("filtrar__collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var filtrar__content = this.nextElementSibling;
-    if (filtrar__content.style.maxHeight){
-        filtrar__content.style.maxHeight = null;
-    } else {
-        filtrar__content.style.maxHeight = filtrar__content.scrollHeight + "px";
-    } 
-  });
-}
