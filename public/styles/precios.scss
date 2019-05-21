@@ -93,24 +93,15 @@ body{
                 li{
                     
                     margin-top: 5px;
-                    
                     margin-right: 15px;
                     list-style: none; 
                     
                     a{
-                        
                         color: $grayColor;
                         text-decoration: none;
                     }
                 }
-                /*
-                &:hover{
-                    background: white; 
-                    text-decoration: underline;
-                }
-                */
             }
-            
         }
         
         &__contact{
@@ -160,13 +151,20 @@ body{
                     border: 1px;
                     text-decoration: none;
                     padding: 8px 18px;
-                    color: #fff;}
+                    color: #fff;
+                }
                     
                     
                 }
                 
-                &:hover{
-                    background: white; text-decoration: underline;
+                a:hover{
+                    color: #0af; text-decoration: none;
+                }
+
+                li:active{
+                    color: #0af;
+                    text-decoration: #0af;
+                    text-decoration-line: underline;
                 }
                 
             }
