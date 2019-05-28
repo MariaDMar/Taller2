@@ -22,6 +22,7 @@ body{
     
 }
 
+
 .nav{ 
     
     width: 90%;
@@ -41,11 +42,9 @@ body{
     &__header{
         
         background: #ffffff;
-        width: 85%;
-        
+        width: 100%;
         height: 70px;
         min-height: 70px;
-        
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -70,10 +69,11 @@ body{
             
             &__logo{
                 width: auto;
-                margin-left: 25px;
+                margin-left: 110px;
                 
                 figure{
                     width: auto;
+                    
                 }
             }
             
@@ -106,7 +106,7 @@ body{
         
         &__contact{
             
-            margin-right: 25px;
+            margin-right: 110px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -134,6 +134,10 @@ body{
                     font-weight: 700;
                     font-size: 14px;
                     color: rgb(175, 182, 187);
+
+                    a{
+                        color: #0af;
+                    }
                 }
                 
                 button:hover{
@@ -143,6 +147,10 @@ body{
                     text-decoration: none;
                     color: #fff;
                     padding: 8px 18px;
+
+                    a{
+                        color: white;
+                    }
                 }
                 
                 button:active{
@@ -245,6 +253,8 @@ body{
             }
         }
     }
+
+   
     
     .titulos{
         position: absolute;
@@ -276,14 +286,14 @@ body{
     .filtrar{
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: flex-start;
         align-content: flex-start;
         align-items: flex-start;
         flex-shrink: 0;
         width: 80%;
         height: 10%;
-        margin-top: 20%;
+        margin-top: 12%;
         
         &__collapsible{
             
@@ -300,7 +310,7 @@ body{
             border: 2px solid #00DD80;
             box-sizing: border-box;
             border-radius: 40px;
-            margin-top: 80px;
+            margin-top: 50px;
             outline: none;
             cursor: pointer; 
             h2{
@@ -323,7 +333,7 @@ body{
             transition: max-height 0.2s ease-out;
             width: 100%;
             height: 20%;
-            margin-top: 5%;
+            margin-top: 2%;
             background: #FFFFFF;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             
@@ -348,9 +358,23 @@ body{
         
     }
     
-    .active, .filtrar__collapsible:hover{
-        
+    @media(max-width:1200px){
+        .filtrar{
+            margin-top: 20%;
+          
+        }
+      
     }
+
+    @media(max-width:1024px){
+        .filtrar{
+            margin-top: 22%;
+            margin-left: 10%;
+         
+        }
+      
+    }
+    
     
     .paquetes{   
         display: flex;

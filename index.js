@@ -93,30 +93,6 @@ app.get('/precios', function (req, res) {
 
 });
 
-//PARA PRODUCTOS ARMADOS 
-/*app.post('/entrando', function(req, res){
-    console.log(req.body.enviaproducto);
-    console.log(req.body);
-     var r = req.body.enviaproducto;
-
-    var pedido = {
-        correo: req.body.comprador,
-        telefono: req.body.cedula,
-        fecha: new Date(),
-        estado: 'nuevo',
-        direccion: req.body.direccion,
-        precio: r
-    };
-    
-    var collection = db.collection('pedidosArmando');
-    collection.insertOne(pedidoArmando,function(err){
-        assert.equal(err,null);
-        console.log('pedido guardado');
-        
-    });
-
-    
-}); */
 
 
 //configurar pagina de pagos
@@ -128,6 +104,12 @@ app.get('/pagos', function (req, res) {
     }
     res.render('pagos', contexto);
 
+});
+
+//configurar pagina tutoriales
+
+app.get('/tutoriales', function (req, res) {
+    res.render('tutoriales');
 });
 
 //pagina para guardar información de pagos en base de datos
