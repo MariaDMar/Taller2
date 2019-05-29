@@ -10,6 +10,8 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400, 600, 700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/styles/precios.css">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -52,7 +54,7 @@
     </nav>
 
 
-    <section class="titulos">
+    <section data-aos="fade-up" data-aos-duration="1500" class="titulos">
         <h1>Selecciona tu paquete.</h1>
         <h2>Escoge las funciones que tu equipo de trabajo está necesitando actualmente. Haz crecer con facilidad tu
             negocio</h2>
@@ -92,13 +94,7 @@
         </div>
     </section>
 
-
-
-
-
     <section class="paquetes">
-
-
         <div class="paquetes__item">
 
             {{#each productos}}
@@ -147,10 +143,6 @@
             {{/each }}
 
         </div>
-
-        <!-- <section id="section03" class="demo">
-        <a href="#titulosp"><span></span></a>
-    </section> -->
 
     </section>
 
@@ -238,10 +230,12 @@
     </section>
 
 
+ <!--LIBRERIA DE AOS-->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   
     <script src="/js/filter.js" type="text/javascript"></script>
-
     <script src="/js/aprecios.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

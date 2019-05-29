@@ -188,3 +188,9 @@ function actualizarPedido(){
 }
 
 
+function paginaCargada(){
+    AOS.init();
+  }
+  
+  window.addEventListener('load', paginaCargada);
+    
