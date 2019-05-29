@@ -35,9 +35,19 @@ parte.addEventListener('click', function (event) {
   tl.play();
 });*/
 
+/*
+
 TweenMax.from(".banner__in__texto", 1, {opacity: 0.3, x:"-200px"});
 TweenMax.from(".banner__in__image", 1, {opacity: 0.3, x:"200px"});
 
 TweenMax.from(".caracteristicas", 1, {opacity: 0.3, y:"200px"});
+*/
 
 console.log('sirvio');
+
+function paginaCargada(){
+  AOS.init();
+}
+
+window.addEventListener('load', paginaCargada);
+  
