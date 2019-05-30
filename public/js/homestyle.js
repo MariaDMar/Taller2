@@ -57,22 +57,18 @@ function animacionCargada(){
 
 var box = document.querySelector("#box1");
 var box2 = document.querySelector("#box2");
-var box3 = document.querySelector("#box3");
-var box4 = document.querySelector("#box4");
-var box5 = document.querySelector("#box5");
 
 var tl = new TimelineMax({repeat: -1});
 
-tl.to(box, 1, {x: 50, y:0})
-.to(box2, 1, {x: 50, y:50})
-.to(box3, 1, {x: -50, y:50}) 
-.to(box4, 1, {x: -50, y:0})
-.to(box4, 1, {x: -50, y:0})
-
-repeat(-1);
+tl.to(box, 1, {x:50, y:0, opacity:100})
+tl.to(box, 1, {opacity:0})
 
 }
 
+var tl = new TimelineMax({repeat: -1});
+tl.to(box2, 1, {x:-50, y:0, opacity:100})
+
+tl.to(box2, 1, {opacity:0})
 /*
 var total = 100;
 var w = $(".confeti").width();
