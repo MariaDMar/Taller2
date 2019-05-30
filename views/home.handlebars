@@ -21,12 +21,6 @@
 
 <body>
 
-    <div class="scrollbar__content">
-        <div class="scrollbar__content__info" id="style-1">
-            <div class="scrollbar__content__info-force"></div>
-        </div>
-    </div>
-
     <nav class="nav">
 
         <header class="nav__header">
@@ -63,15 +57,21 @@
         </ul>
 
     </nav>
+    <!--
+    <div class="confeti">
+        <div class="confeti__dot">
+        </div>
+    </div>-->
 
     <div class="banner">
         <div class="banner__in">
-            <div  data-aos="fade-right" data-aos-duration="1000" class="banner__in__texto">
+            <div data-aos="fade-right" data-aos-duration="1000" class="banner__in__texto">
 
                 <h2>Wx Manager</h2>
-                <h1> Version 180</h1>
-                <p>Facturación Electrónica, CRM, Envío Automático de Correos, Normas Internacionales, Manejo de Punto de
-                    Pago Remoto, Dispositivos móviles, Personalización de Campos, Tutoriales. </p>
+                <h1>Versión 180</h1>
+                <p>Lleva la Versión 180 totalmente gratis, vas a poder realizar facturas electrónicas, CRM, envío
+                    automático de correos, Normas Internacionales, Manejo de Punto de
+                    Pago Remoto, Dispositivos móviles, Personalización de Campos, Tutoriales y mucho más. </p>
                 <!--  <button>Descargar ahora</button> -->
                 <a id="superButton" href="#" data-title="Descargar Ahora"></a>
             </div>
@@ -84,8 +84,20 @@
 
     <section class="publicitario">
         <div class="publicitario__texto">
-            <h1>Facturación Electrónica <b>Gratuita</b></h1>
+            <h1 id="box1">Facturación Electrónica</h1>         
         </div>
+                <div class="publicitario__texto">
+                     <h1 id="box2"><b>Gratuita</b></h1>
+                </div>
+                <div class="publicitario__texto">
+                <h1 id="box3">solo con</h1>
+                </div>
+                <div class="publicitario__texto">
+                  <h1 id="box4">Wx Manager</h1>
+                </div>
+                <div class="publicitario__texto">
+                     <h1 id="box5">descargalo ya <button>aquí</button></h1>
+                </div>
         <div class="publicitario__boton"> <button>Probar</button></div>
     </section>
 
@@ -154,7 +166,7 @@
                             Conozca oportunamente la cantidad de productos que hay en su empresa de manera inmediata, le
                             ofrecemos la mayor gama respecto a inventarios en el mercado. </p>
                     </div>
-                    <div data-aos="fade-right" data-aos-duration="1000"  class="interaction__info__image">
+                    <div data-aos="fade-right" data-aos-duration="1000" class="interaction__info__image">
                         <img src="imagenes/inventarios.png" alt="" width="20%">
                     </div>
                 </div>
@@ -199,7 +211,7 @@
 
     <section class="specification">
         <div class="specification__image">
-            <h1 data-aos="fade-up" data-aos-duration="1000" >Especificaciones</h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000">Especificaciones</h1>
             <img class="specification__img" src="/gifs/try3.gif" alt="">
         </div>
 
@@ -313,6 +325,9 @@
     <!--LIBRERIA DE AOS-->
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!--LIBRERIA DE PTS-->
+    <script src="/path/to/pts.min.js"></script>
 
     <!--LIBRERÍAS DE GREENSOCK-->
     <script>"https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"</script>
