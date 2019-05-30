@@ -332,8 +332,19 @@ html{
             width: 20%;
             min-width: 30%;
             right: 29.8%;
-            bottom: -100%;
+            bottom: -115%;
 
+        }
+
+        //nubes 
+
+        &__imgq{
+            position: absolute;
+            z-index: 0;
+            width: 60%;
+            max-width: 100%;
+            bottom: -200%;
+            left: 15%;
         }
     }
     
