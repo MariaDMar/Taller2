@@ -267,67 +267,76 @@ html{
     
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: center;
     align-content: center;
     align-items: center;
+    position: relative;
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
     
     h1{
-        margin-bottom: 30px;
         font-family: 'Open Sans', sans-serif;
-        font-weight: 700;
-        font-size: 50px;
+        font-weight: 400;
+        font-size: 32px;
         color:  rgb(15, 55, 139);
+        z-index: 5;
+        
+    }
+
+    .button{
+        z-index: 6;
+    }
+
+    &__animacion{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        position: absolute;
+        margin-top: 25%;
+        width: 100%;
+        height: 100%;
+
+        &__imgu{
+            position: absolute;
+            z-index: 1;
+            width: 70%;
+            max-width: 100%;
+        }
+    
+        //tuerca grande
+        &__imgd{
+            position: absolute;
+            z-index: 2;
+            width: 10%;
+            left: 32%;
+            bottom: 198%;
+        }
+    
+        //tuerca pequeña
+        &__imgt{
+            position: absolute;
+            z-index: 3;
+            width: 10%;
+            bottom: 20%;
+            right: 53%;
+        }
+    
+        //codigo imagen
+        &__imgc{
+            position: absolute;
+            z-index: 4;
+            width: 20%;
+            min-width: 30%;
+            right: 29.8%;
+            bottom: -100%;
+
+        }
     }
     
-    &__imgu{
-        z-index: 1;
-    }
-
-    &__imgd{
-        z-index: 2;
-    }
-    
-    &__imgt{
-        z-index: 3;
-    }
-
-    &__imgc{
-        z-index: 4;
-    }
-
-
-    img{
-        max-width: 40%;
-    }
 }
 
-.azul{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    
-    h1{
-        margin-bottom: 30px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 700;
-        font-size: 50px;
-        color:  rgb(15, 55, 139);
-    } 
-}
-
-.bdos{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    img{
-        max-width: 4 0%;
-    }
-}
 
