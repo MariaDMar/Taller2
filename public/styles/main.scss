@@ -356,9 +356,9 @@ html{
             width: 60%;
             height: auto;
             
-            
         }
         &__img{
+            max-width: 70%;;
             width: 100%;
         }
     }
@@ -380,7 +380,7 @@ html{
         
         order: 0;
         flex: 0 1 auto;
-        
+        max-width: 20%;
         margin-right: 7%;
         h1{
             width: 100%;
@@ -388,6 +388,7 @@ html{
             font-family: 'Open Sans', sans-serif;
             font-weight: 300;
             opacity: 0;
+           
         }        
     }
     
@@ -922,11 +923,14 @@ html{
                         margin-top: 70px;
                         
                         &__texto{
+                            
+                        margin-left: -18%;
                             h1{
                                 font-size: 18px;
                             }
                         }
                         &__boton{
+                            margin-right: -20%;
                             margin-top: 10px;
                         }
                     } .caracteristicas{

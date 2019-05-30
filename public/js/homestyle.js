@@ -58,16 +58,19 @@ function animacionCargada(){
 var box = document.querySelector("#box1");
 var box2 = document.querySelector("#box2");
 
-var tl = new TimelineMax({repeat: -1});
+var tl = new TimelineMax({repeat: -1, repeatDelay: 1});
 
+tl.to(box, 1, {x:50, y:0, opacity:100})
+tl.to(box, 1, {x:50, y:0, opacity:100})
 tl.to(box, 1, {x:50, y:0, opacity:100})
 tl.to(box, 1, {opacity:0})
 
 }
 
-var tl = new TimelineMax({repeat: -1});
+var tl = new TimelineMax({repeat: -1, repeatDelay: 1});
 tl.to(box2, 1, {x:-50, y:0, opacity:100})
-
+tl.to(box2, 1, {scale: 1.1, y:0, opacity:100})
+tl.to(box2, 1, {scale: 1.1, y:0, opacity:100})
 tl.to(box2, 1, {opacity:0})
 /*
 var total = 100;
