@@ -31,7 +31,7 @@ console.log(parte);
 parte.addEventListener('click', function (event) {
   console.log('/////// entra a TL');
   var tl = new TimelineLite();
-  tl.to(this, 1, { scale: 1.1}, 0.7);
+  tl.to(this, 0.1, { scale: 0.5}, 0.7);
   tl.play();
 });
 
