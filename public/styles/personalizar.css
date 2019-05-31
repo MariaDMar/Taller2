@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.transacciones {
+  width: 200px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.transacciones #quitarT {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}
+
+.transacciones #agregarT {
+  width: 30px;
+  height: 30px;
+  background-color: green;
+}
+
+.transacciones #transaccion {
+  width: 60px;
+  height: 60px;
+  background-color: gray;
+  font-size: 30px;
+}
+
+.personas {
+  width: 200px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.personas #quitarP {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}
+
+.personas #agregarP {
+  width: 30px;
+  height: 30px;
+  background-color: green;
+}
+
+.personas #persona {
+  width: 60px;
+  height: 60px;
+  background-color: lightblue;
+  font-size: 30px;
+}
+
+#btnCotizar {
+  width: 80px;
+  height: 40px;
+  background-color: pink;
+}
+/*# sourceMappingURL=personalizar.css.map */
