@@ -25,24 +25,16 @@ function moverTexto(){
 */
 
 //SIRVE PARA LA PARTE DE TUTORIALES EN CONSUTRCCION
-/*var parte = document.querySelector(".nav__header__container__logo");
+var parte = document.querySelector("#micro");
 console.log(parte);
 
 parte.addEventListener('click', function (event) {
   console.log('/////// entra a TL');
   var tl = new TimelineLite();
-  tl.to(this, 1, { y: "-200px" }, 0.7);
+  tl.to(this, 1, { scale: 1.1}, 0.7);
   tl.play();
-});*/
+});
 
-/*
-
-
-TweenMax.from(".banner__in__texto", 1, {opacity: 0.3, x:"-200px"});
-TweenMax.from(".banner__in__image", 1, {opacity: 0.3, x:"200px"});
-
-TweenMax.from(".caracteristicas", 1, {opacity: 0.3, y:"200px"});
-*/
 
 
 
@@ -72,32 +64,6 @@ tl.to(box2, 1, {x:-50, y:0, opacity:100})
 tl.to(box2, 1, {scale: 1.1, y:0, opacity:100})
 tl.to(box2, 1, {scale: 1.1, y:0, opacity:100})
 tl.to(box2, 1, {opacity:0})
-/*
-var total = 100;
-var w = $(".confeti").width();
-var h = $(".confeti").height();
- 
- for (i=0; i<total; i++){ 
- $(".confeti").append('<div class=".confeti__dot"></div>')
- TweenMax.set($(".confeti__dot")[i],{x:Random(w),y:random(-100,100) ,opacity:1,scale:Random(0.5)+0.5,backgroundColor:"hsl(" + random(170,360) + ",50%,50%)"});
- animm($(".confeti__dot")[i]);
- }
- 
- function animm(elm){   
- TweenMax.to(elm,Random(5)+4,{y:h,ease:Linear.easeNone,repeat:-1, delay:-5});
- TweenMax.to(elm,Random(5)+1,{x:'+=70', repeat:-1,yoyo:true,ease:Sine.easeInOut})
-  TweenMax.to(elm,Random(5)+1,{scaleX:0.2,rotation:Random(360), repeat:-1,yoyo:true,ease:Sine.easeInOut})
- TweenMax.to(elm,Random(1)+0.5,{opacity:0, repeat:-1,yoyo:true,ease:Sine.easeInOut})
- };
-
-function Random (max) {
-return Math.random()*max;
-}
-
-function random(min, max) {
-return min + Math.floor( Math.random() * (max - min));
-}
-*/
 
 
 
