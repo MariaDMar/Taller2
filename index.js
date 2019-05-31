@@ -39,7 +39,7 @@ MongoClient.connect(`mongodb+srv://cluster0-ncaly.mongodb.net/wxmanager`,
 function (err, client) {
     if(err) throw err;
     db = client.db('wxmanager');
-    app.listen(process.env.PORT || 5000);
+    app.listen(process.env.PORT || 3000);
 });
 
 
@@ -218,7 +218,7 @@ app.post('/cotizar', function (req, res) {
         
     });
     
-    setTimeout(function () { res.redirect('/precios') }, 5000);
+    setTimeout(function () { res.redirect('/precios') }, 3000);
 });
 
 /*app.listen(3000, function () {
