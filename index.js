@@ -27,7 +27,7 @@ var db = null;
 //configurar la carpeta public como publica
 app.use(express.static('public'));
 
-client.connect(`mongodb+srv://cluster0-ncaly.mongodb.net/wxmanager`, {
+MongoClient.connect(`mongodb+srv://cluster0-ncaly.mongodb.net/wxmanager`, {
 
 auth:{
     user: 'mariadmar',
