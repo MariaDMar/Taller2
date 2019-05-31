@@ -1,10 +1,7 @@
 //importar el módulo express
 const express = require('express');
-
 //crear la variable app usando express
 const app = express();
-
-
 const motorRender = require('express-handlebars');
 
 
@@ -20,31 +17,27 @@ const dbName = 'wxmanager';
 
 // Create a new MongoClient
 const client = new MongoClient(url, { useNewUrlParser: true });
-
 var db = null;
 
 
-//configurar la carpeta public como publica
-app.use(express.static('public'));
-
-MongoClient.connect(`mongodb+srv://cluster0-ncaly.mongodb.net/wxmanager`, {
-
-auth:{
-    user: 'mariadmar',
-    password: '678yes!'
+MongoClient.connect(`mongodb+srv://cluster0-ncaly.mongodb.net/wxmanager`, 
+{   
+    auth:{
+        user: 'mariadmar',
+        password: '678yes!'
+    }
 },
 
 function (err, client) {
     if(err) throw err;
     db = client.db('wxmanager');
-    
     app.listen(process.env.PORT || 5000);
-    
-}
-
 });
 
 
+
+//configurar la carpeta public como publica
+app.use(express.static('public'));
 
 //configura handlebars
 app.engine('handlebars', motorRender());
@@ -68,6 +61,20 @@ client.connect(function (err) {
     
     db = client.db(dbName);
 });*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //configurar la ruta inicial
 app.get('/', function (req, res) {
