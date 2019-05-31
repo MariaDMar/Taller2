@@ -20,6 +20,14 @@ const client = new MongoClient(url, { useNewUrlParser: true });
 var db = null;
 
 
+
+//configura handlebars
+app.engine('handlebars', motorRender());
+app.set('view engine', 'handlebars');
+
+//configurar la carpeta public como publica
+app.use(express.static('public'));
+
 MongoClient.connect(`mongodb+srv://cluster0-ncaly.mongodb.net/wxmanager`, 
 {   
     auth:{
@@ -36,12 +44,6 @@ function (err, client) {
 
 
 
-//configurar la carpeta public como publica
-app.use(express.static('public'));
-
-//configura handlebars
-app.engine('handlebars', motorRender());
-app.set('view engine', 'handlebars');
 
 //instalando bodyparse
 
