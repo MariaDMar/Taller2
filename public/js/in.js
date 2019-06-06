@@ -141,8 +141,8 @@ function crearPregunta(pregunta) {
                 // Si el juego termino,y se responde la ultima pregunta entonces comprueba si gano o perdio
                 if (end == true) {
                     console.log();
-                    if (majority(respuestas) == 0) window.location.href = "/perdiste";
-                    if (majority(respuestas) == 1) window.location.href = "/ganaste";
+                    if (majority(respuestas) == 0) document.querySelector(".interaccion__preguntas__but").innerHTML="PERDISTE";
+                    if (majority(respuestas) == 1) document.querySelector(".interaccion__preguntas__but").innerHTML="GANASTE " + "</br> " + generateCode;
                     // funcion para redireccionar
                     //window.location.href = "http://www.w3schools.com"
                 }
@@ -181,5 +181,3 @@ function randomString(length, chars) {
     for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
     return result;
 }
-
-console.log(generateCode(), "ESTE ES EL CODIGO GENERADO");
