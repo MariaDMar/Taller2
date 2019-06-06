@@ -145,6 +145,11 @@ app.get('/tutoriales', function (req, res) {
     res.render('tutoriales');
 });
 
+app.get('/interaccion', function (req, res) {
+    res.render('interaccion');
+});
+
+
 //pagina para guardar información de pagos en base de datos
 app.post('/login', function (req, res) {
     console.log(req.body.enviaproduct);
@@ -220,7 +225,7 @@ app.post('/cotizar', function (req, res) {
     
     setTimeout(function () { res.redirect('/precios') }, 3000);
 });
-
-/*app.listen(3000, function () {
+/*
+app.listen(3000, function () {
     console.log('Hola');
 }); */

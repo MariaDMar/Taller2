@@ -1,0 +1,371 @@
+$grayColor: rgb(160, 160, 160);
+$lightGrayColor: rgb(230, 230, 230);
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    font-family: sans-serif;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+html{
+    height: 100%;
+}
+
+.nav{ 
+    
+    width: 90%;
+    height: auto;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    
+    
+    
+    &__header{
+        
+        background: #ffffff;
+        width: 100%;
+        height: 70px;
+        min-height: 70px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        position: fixed;
+        
+        
+        &__container{
+            
+            width: auto;
+            height: 100%;
+            
+            
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;        
+            
+            &__logo{
+                width: auto;
+                margin-left: 110px;
+                
+                figure{
+                    width: auto;
+                    
+                }
+            }
+            
+            &__links{
+                
+                margin-left: 15px;
+                width: auto;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-content: center;
+                align-items: center;
+                
+                li{
+                    
+                    margin-top: 5px;
+                    margin-right: 15px;
+                    list-style: none; 
+                    
+                    a{
+                        color: $grayColor;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        
+        &__contact{
+            
+            margin-right: 110px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-content: center;
+            align-items: center;
+            
+            li{
+                margin-left: 15px;
+                text-decoration: none;
+                list-style: none; 
+                
+                a{
+                    color: $grayColor; 
+                    text-decoration: none;
+                }
+                
+                button{
+                    background: none;
+                    border-radius: 42px;
+                    text-decoration: none;
+                    padding: 8px 18px;
+                    border: 1px solid rgb(175, 182, 187);
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: rgb(175, 182, 187);
+                    
+                    a{
+                        color: #0af;
+                    }
+                }
+                
+                button:hover{
+                    background: #0af;
+                    border-radius: 42px;
+                    border: 1px;
+                    text-decoration: none;
+                    color: #fff;
+                    padding: 8px 18px;
+                    
+                    a{
+                        color: white;
+                    }
+                }
+                
+                button:active{
+                    background: rgb(2, 83, 175);
+                    border-radius: 42px;
+                    border: 1px;
+                    text-decoration: none;
+                    padding: 8px 18px;
+                    color: #fff;
+                }
+                
+                
+            }
+            
+            a:hover{
+                color: #0af; text-decoration: none;
+            }
+            
+            li:active{
+                color: #0af;
+                text-decoration: #0af;
+                text-decoration-line: underline;
+            }
+            
+        }
+        
+        &__toggle{
+            width: auto;
+            margin-right: 25px;
+            background: white;
+            text-align: right;
+            box-sizing: border-box;
+            color: black;
+            font-size: 30px;
+            display: none;
+        }
+    }
+    
+    &__column{
+        display: none;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        
+        li{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 12px 0;
+            
+            a{
+                text-decoration: none;
+                color: gray;
+            }
+        }
+        
+        .button{
+            border: none;
+        }
+    }
+}
+
+.preguntaTitle{
+    h1{
+
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        text-align: center;
+        color: #09374C;
+        margin-top: 15px;
+        font-size: 16px;
+    }
+    
+}
+
+.respuestasContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.respuesta{
+    align-content: center;
+    width: 100%;
+    padding: 8px 0;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #09374C;
+    background: none;
+    border: 2px solid #00DD80;
+    box-sizing: border-box;
+    border-radius: 40px;
+    margin-bottom: 4%;
+    outline: none;
+    cursor: pointer; 
+    text-align: center;
+    vertical-align: middle;
+}
+
+.respuesta:hover{
+    background: rgb(4, 172, 102);
+    border: 2px solid rgb(4, 172, 102);
+    color:white;
+}
+
+.respuesta:active{
+    background: rgb(4, 172, 102);
+    color:white;
+}
+
+
+.interaccion{
+    background: white;
+    box-shadow: 2px 0px 4px 4px rgba(87, 87, 87, 0.1);
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    
+    h2{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        text-align: center;
+        color:  rgb(15, 55, 139);
+        margin-top: 2%;
+    }
+
+    h1{
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        text-align: center;
+        color: #09374C;
+        font-size: 16px;
+        margin-bottom: 4%;
+    }
+   
+    
+    &__preguntas{
+       
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        width: 80%;
+   
+    }
+    
+    
+}
+
+
+@media(max-width:860px){
+                    
+    .nav{
+        
+        &__header{
+            
+            
+            
+            &__toggle{
+                display: flex;
+            }
+            
+            
+            
+            &__container{
+                
+                &__links{
+                    display: none;
+                }
+            }
+            
+            &__contact{
+                display: none;
+            }
+            
+        }
+        
+        &__column{
+            display: none;
+        }
+        
+        .active{
+            display: flex;
+        }
+    }
+}
+
+
+
+

@@ -290,21 +290,6 @@ html {
   border: none;
 }
 
-/*
-.confeti{
-    
-    width:100%; 
-    height:100%;
-    
-    &__dot{
-        
-        width:12px;
-        height:24px;
-        background-color:#00FF00;
-        z-index:1;
-        
-    }
-}*/
 .banner {
   width: 100%;
   height: auto;
