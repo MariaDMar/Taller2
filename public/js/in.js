@@ -142,7 +142,7 @@ function crearPregunta(pregunta) {
                 if (end == true) {
                     console.log();
                     if (majority(respuestas) == 0) document.querySelector(".interaccion__preguntas__but").innerHTML="PERDISTE";
-                    if (majority(respuestas) == 1) document.querySelector(".interaccion__preguntas__but").innerHTML="GANASTE " + "</br> " + generateCode();
+                    if (majority(respuestas) == 1) document.querySelector(".interaccion__preguntas__but").innerHTML="Ganaste 10% de descuento en cualquier paquete" + "</br> Ingresa el siguiente código:" + generateCode();
                     // funcion para redireccionar
                     //window.location.href = "http://www.w3schools.com"
                 }
