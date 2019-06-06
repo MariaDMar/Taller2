@@ -142,7 +142,7 @@ function crearPregunta(pregunta) {
                 if (end == true) {
                     console.log();
                     if (majority(respuestas) == 0) document.querySelector(".interaccion__preguntas__but").innerHTML="PERDISTE";
-                    if (majority(respuestas) == 1) document.querySelector(".interaccion__preguntas__but").innerHTML="Ganaste 10% de descuento en el paquete contable" + "</br> Gurada el siguiente código: " + generateCode() + " y llamanos al: 302-460-0263" ;
+                    if (majority(respuestas) == 1) document.querySelector(".interaccion__preguntas__but").innerHTML="Ganaste 10% de descuento en el paquete contable" + "</br> Guarda el siguiente código: " + generateCode() + " y llamanos al: 302-460-0263" ;
                     // funcion para redireccionar
                     //window.location.href = "http://www.w3schools.com"
                 }
