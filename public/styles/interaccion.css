@@ -417,6 +417,15 @@ html {
   width: 80%;
 }
 
+.interaccion__preguntas__but h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16gpx;
+  text-align: center;
+  color: #0f378b;
+  margin-top: 2%;
+}
+
 @media (max-width: 860px) {
   .nav__header__toggle {
     display: -webkit-box;
