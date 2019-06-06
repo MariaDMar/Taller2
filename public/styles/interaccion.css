@@ -427,11 +427,6 @@ html {
   margin-bottom: 2%;
 }
 
-.interaccion__preguntas__but a {
-  text-decoration: none;
-  background: none;
-}
-
 @media (max-width: 860px) {
   .nav__header__toggle {
     display: -webkit-box;

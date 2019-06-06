@@ -332,6 +332,12 @@ html {
   font-weight: 300;
 }
 
+.publicitar__texto a {
+  text-decoration: none;
+  background: none;
+  color: #ffffff;
+}
+
 .banner {
   width: 100%;
   height: auto;
