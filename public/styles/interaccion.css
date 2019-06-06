@@ -397,6 +397,16 @@ html {
   margin-bottom: 4%;
 }
 
+.interaccion h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  color: #0f378b;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
 .interaccion__preguntas {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -415,16 +425,6 @@ html {
       -ms-flex-align: center;
           align-items: center;
   width: 80%;
-}
-
-.interaccion__preguntas__but h2 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  text-align: center;
-  color: #0f378b;
-  margin-top: 2%;
-  margin-bottom: 2%;
 }
 
 @media (max-width: 860px) {
