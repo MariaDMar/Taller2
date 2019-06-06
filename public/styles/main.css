@@ -312,6 +312,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  margin-top: 2%;
 }
 
 .publicitar__texto {
